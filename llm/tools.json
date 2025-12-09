@@ -1,0 +1,23 @@
+[
+    {
+        "type": "function",
+        "function": {
+            "name": "search_trials",
+            "description": "Search clinical trials using vector similarity search. Returns trials matching the query text based on semantic similarity.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "queryText": {
+                        "type": "string",
+                        "description": "Natural language description of what to search for (conditions, goals, other context). This is required."
+                    },
+                    "maxRows": {
+                        "type": "integer",
+                        "description": "Maximum number of trials to return. If not specified, defaults to 5."
+                    }
+                },
+                "required": ["queryText"]
+            }
+        }
+    }
+]
