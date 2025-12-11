@@ -31,6 +31,7 @@ Team10HealthCompanion/
 ├── requirements.txt                 # Python dependencies
 ├── .env.example                     # Environment variables template
 ├── .gitignore                       # Git ignore rules
+├── fhir_test_patients.csv           # Test patient data with MPIIDs and FHIR endpoints
 ├── src/
 │   ├── __init__.py
 │   ├── main.py                      # Streamlit entry point
@@ -71,14 +72,29 @@ Team10HealthCompanion/
 ### 1. Authentication Module (`src/auth/`)
 - **Purpose**: Minimal login UI before chat access
 - **Functionality**: 
-  - Simple username/password or demo login
-  - Session initialization
-  - **Immediately after login**: Triggers FHIR fetch tool
+  - Simple hardcoded username/password for demo
+  - **Hardcoded MPI ID mapping**: Login credentials map to MPIID from `fhir_test_patients.csv`
+  - **Test Patient**: Marla Gonzalez (MPIID: 100000010) - default test patient
+  - Session initialization with associated MPIID
+  - **Immediately after login**: Triggers FHIR fetch tool with mapped MPIID
+- **Implementation Note**: 
+  - For demo, any valid login maps to test patient MPIID: 100000010 (Marla Gonzalez)
+  - FHIR endpoint is retrieved from CSV file based on MPIID
 
 ### 2. FHIR Fetch Tool (`src/tools/fhir_fetch.py`)
 - **Purpose**: Fetch patient-specific FHIR test data (executed immediately after login)
+- **Data Source**: 
+  - Reads patient endpoints from `fhir_test_patients.csv` (MPIID, Name, Endpoint)
+  - Uses MPIID from authenticated session to lookup endpoint
+  - Endpoint format: `http://ec2-98-82-129-136.compute-1.amazonaws.com/ucr/csp/healthshare/hsods/fhir/r4/Patient/{MPIID}/$everything`
+- **Authentication**: 
+  - Uses Basic Authentication (username/password from environment variables)
+  - Credentials: `FHIR_USERNAME` and `FHIR_PASSWORD` from `.env`
 - **Critical Flow**:
   - **First action** after successful login
+  - Retrieves MPIID from session
+  - Looks up endpoint from CSV file
+  - Makes authenticated GET request to FHIR endpoint
   - If FHIR fetch **succeeds**: Proceed to chat interface with FHIR data in context
   - If FHIR fetch **fails**: End flow, display error message asking user to contact technical staff
 - **Data Format**: Raw FHIR resources (JSON) passed directly to LLM
@@ -142,14 +158,18 @@ Team10HealthCompanion/
 - [x] Setup .env.example for configuration
 
 ### Phase 2: Core Infrastructure
-- [ ] Implement authentication module (minimal login)
+- [ ] Implement authentication module (minimal login with hardcoded credentials)
+- [ ] Implement MPIID mapping: map login to test patient MPIID (default: 100000010 - Marla Gonzalez)
 - [ ] Setup Streamlit app structure
 - [ ] Create base LLM orchestrator with OpenAI integration
 - [ ] Implement session memory management
 - [ ] Setup basic chat UI in Streamlit
 
 ### Phase 3: FHIR Integration (as Tool)
+- [ ] Create CSV reader utility to load `fhir_test_patients.csv`
 - [ ] Create FHIR fetch tool (`src/tools/fhir_fetch.py`)
+- [ ] Implement endpoint lookup from CSV based on MPIID
+- [ ] Implement Basic Authentication using FHIR_USERNAME and FHIR_PASSWORD
 - [ ] Implement automatic FHIR fetch immediately after login
 - [ ] Implement error handling: if FHIR fetch fails, end flow with technical support message
 - [ ] Integrate raw FHIR resources into LLM context (no parsing)
@@ -189,14 +209,24 @@ requests>=2.31.0
 ## Environment Variables Needed
 
 ```
+# OpenAI Configuration
 OPENAI_API_KEY=your_openai_api_key
 OPENAI_MODEL=gpt-4  # Note: User specified GPT-5.1, but using GPT-4 as fallback (verify model availability)
-PROVIDER_API_URL=provider_availability_api_url  # Dummy/stub endpoint for initial build
+
+# FHIR Server Authentication (Basic Auth)
+FHIR_USERNAME=your_fhir_username
+FHIR_PASSWORD=your_fhir_password
+
+# Provider Availability API (Dummy/stub endpoint for initial build)
+PROVIDER_API_URL=provider_availability_api_url
 PROVIDER_API_KEY=provider_api_key  # if needed
-CLINICAL_TRIAL_API_URL=clinical_trial_api_url  # Will be provided later
+
+# Clinical Trial Search API (Will be provided later)
+CLINICAL_TRIAL_API_URL=clinical_trial_api_url
 CLINICAL_TRIAL_API_KEY=clinical_trial_api_key  # if needed
-FHIR_SERVER_URL=fhir_test_server_url  # Stub endpoint for initial build, actual endpoint provided later
 ```
+
+**Note**: FHIR endpoints are read from `fhir_test_patients.csv` file, not from environment variables. The CSV contains MPIID, Name, and Endpoint URL for each test patient.
 
 ## Critical Implementation Rules
 
@@ -209,19 +239,25 @@ FHIR_SERVER_URL=fhir_test_server_url  # Stub endpoint for initial build, actual 
 7. **FHIR fetch is mandatory** - Must succeed after login, or flow ends with technical support message
 8. **Raw FHIR resources** - No parsing, pass directly to LLM for reasoning
 9. **FHIR data informs** but doesn't dictate responses
+10. **MPIID mapping** - Login maps to hardcoded MPIID (100000010 - Marla Gonzalez) for demo purposes
+11. **FHIR endpoints** - Retrieved from `fhir_test_patients.csv` based on MPIID
 
 ## Questions for Clarification
 
 1. **Git Repository**: What is the URL of the existing git repository? https://github.com/poindext/team-10-super-bowl-iii-public
 2. **FHIR Data Source**: 
-   - Will we use a FHIR test server, or local test data files? - we will connect to a FHIR test server. For initial build use a stub end point for REST API call. 
-   - What format will the FHIR data be in (JSON, XML)? JSON
-   - What is the FHIR server endpoint/API for fetching patient data? - I will provide this later.
+   - Will we use a FHIR test server, or local test data files? - ✅ We will connect to a FHIR test server using endpoints from `fhir_test_patients.csv`
+   - What format will the FHIR data be in (JSON, XML)? ✅ JSON
+   - What is the FHIR server endpoint/API for fetching patient data? ✅ Endpoints are in `fhir_test_patients.csv` file. Format: `http://ec2-98-82-129-136.compute-1.amazonaws.com/ucr/csp/healthshare/hsods/fhir/r4/Patient/{MPIID}/$everything`
+   - Authentication: ✅ Basic Authentication (username/password) - credentials stored in environment variables
+   - Test Patient: ✅ Marla Gonzalez (MPIID: 100000010) - default test patient for hardcoded login
 3. **External APIs**: 
    - Do you have the actual API endpoints and authentication details for Provider Availability and Clinical Trial Search? - I have the URL for Clinical Trial API. Use a dummy API call for provider directory. 
    - Are there API documentation or test credentials available? - We will provide those details later. 
 4. **Authentication**: 
-   - For the demo login, should we use a simple hardcoded user/password, or integrate with a specific auth system? - hardcoded values for now.
+   - For the demo login, should we use a simple hardcoded user/password, or integrate with a specific auth system? ✅ Hardcoded values for now
+   - MPIID Mapping: ✅ Login credentials map to hardcoded MPIID (100000010 - Marla Gonzalez) for demo
+   - FHIR Authentication: ✅ Basic Auth using FHIR_USERNAME and FHIR_PASSWORD from environment variables
 5. **OpenAI Model**: 
    - Which OpenAI model should we use (GPT-4, GPT-3.5-turbo, etc.)? GPT-5.1 (Note: Will verify model availability - may need to use GPT-4 or GPT-4-turbo as fallback)
 
