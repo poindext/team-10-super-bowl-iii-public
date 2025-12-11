@@ -2,241 +2,241 @@ AI Health Companion
 Requirements & Decisions Document (Demo Build)Prepared at end of requirements session
 
 1. Purpose of This Document
-This document captures all agreed-upon requirements, decisions, assumptions, scope boundaries, and illustrative scenarios for the AI Health Companion demo application.
+This document captures all agreed-upon requirements, decisions, assumptions, scope boundaries, and illustrative scenarios for the AI Health Companion demo application.
 The goal is to:
-	•	Clearly communicate what is being built
-	•	Explicitly state what is NOT being built
-	•	Prevent over-engineering or hardcoded logic
-	•	Enable Cursor to implement the system correctly for a demo/MVP, not production
-This is a capability-driven demo, not a full healthcare product.
+	-	Clearly communicate what is being built
+	-	Explicitly state what is NOT being built
+	-	Prevent over-engineering or hardcoded logic
+	-	Enable Cursor to implement the system correctly for a demo/MVP, not production
+This is a capability-driven demo, not a full healthcare product.
 
 2. Product Overview
 Product Name (Working)
 AI Health Companion
 What This Is
-A patient‑facing conversational AI companion that:
-	•	Uses an LLM as an orchestrator
-	•	Reasons over patient clinical data (FHIR test data)
-	•	Dynamically chooses when to:
-	•	Explain
-	•	Ask questions
-	•	Suggest next steps
-	•	Invoke tools
-	•	Supports a wide range of patient needs without predefined flows
+A patient-facing conversational AI companion that:
+	-	Uses an LLM as an orchestrator
+	-	Reasons over patient clinical data (FHIR test data)
+	-	Dynamically chooses when to:
+	-	Explain
+	-	Ask questions
+	-	Suggest next steps
+	-	Invoke tools
+	-	Supports a wide range of patient needs without predefined flows
 What This Is Not
-	•	Not a diagnostic system
-	•	Not a clinical decision support system
-	•	Not a production healthcare app
-	•	Not a rules engine
-	•	Not built around specific medical use cases
+	-	Not a diagnostic system
+	-	Not a clinical decision support system
+	-	Not a production healthcare app
+	-	Not a rules engine
+	-	Not built around specific medical use cases
 
 3. Key Design Philosophy (Critical)
-Capability‑Driven, Not Use‑Case‑Driven
-The system must not be designed around fixed healthcare use cases (e.g., diabetes flow, emergency flow, provider flow).
+Capability-Driven, Not Use-Case-Driven
+The system must not be designed around fixed healthcare use cases (e.g., diabetes flow, emergency flow, provider flow).
 Instead:
-	•	The LLM reasons dynamically at runtime
-	•	Available tools expand capability
-	•	Scenarios are illustrative only, never hardcoded
+	-	The LLM reasons dynamically at runtime
+	-	Available tools expand capability
+	-	Scenarios are illustrative only, never hardcoded
 If a tool exists, the LLM may use it.If a tool does not exist, the LLM explains or asks questions instead.
 
 4. Target User
 Primary User
-	•	Patient
-	•	Non‑technical
-	•	Seeking understanding, guidance, and next steps
-	•	Does not know medical terminology or healthcare workflows
+	-	Patient
+	-	Non-technical
+	-	Seeking understanding, guidance, and next steps
+	-	Does not know medical terminology or healthcare workflows
 No other user roles are in scope for MVP.
 
 5. Authentication & Access
-	•	Login is mandatory before chat access
-	•	Login enables:
-	•	Access to patient‑specific FHIR test data
-	•	Personalized responses
-	•	No advanced user management required
+	-	Login is mandatory before chat access
+	-	Login enables:
+	-	Access to patient-specific FHIR test data
+	-	Personalized responses
+	-	No advanced user management required
 Purpose:
-	•	Personalization
-	•	Credibility
-	•	Contextual reasoning
+	-	Personalization
+	-	Credibility
+	-	Contextual reasoning
 
 6. Conversational Experience
 Chat Experience
-	•	Single, continuous chat
-	•	Free‑form user input
-	•	No menus
-	•	No decision trees
-	•	No predefined conversation paths
+	-	Single, continuous chat
+	-	Free-form user input
+	-	No menus
+	-	No decision trees
+	-	No predefined conversation paths
 The LLM may:
-	•	Respond to questions
-	•	Ask clarifying questions
-	•	Proactively suggest help
-	•	Choose to invoke tools or not
+	-	Respond to questions
+	-	Ask clarifying questions
+	-	Proactively suggest help
+	-	Choose to invoke tools or not
 
 7. LLM as Orchestrator (Core Requirement)
-The LLM is the central decision‑maker.
+The LLM is the central decision-maker.
 It is responsible for:
-	•	Interpreting user intent
-	•	Reasoning over FHIR data
-	•	Deciding whether a tool is useful
-	•	Determining conversation direction
+	-	Interpreting user intent
+	-	Reasoning over FHIR data
+	-	Deciding whether a tool is useful
+	-	Determining conversation direction
 Explicit Constraint
 There must be:
-	•	❌ No if/then medical logic
-	•	❌ No condition‑to‑action mappings
-	•	❌ No hardcoded healthcare flows
+	-	[X] No if/then medical logic
+	-	[X] No condition-to-action mappings
+	-	[X] No hardcoded healthcare flows
 
 8. FHIR Data Context (MVP)
 Data Access
-	•	Pull test clinical data after login
-	•	LLM may reason over:
-	•	Diagnoses
-	•	Encounters
-	•	Medications
-	•	Observations (as available)
-✅ Allowed
-	•	Personalized, non‑diagnostic insights
-	•	Suggested next steps
-	•	Identification of potential or missed diagnoses, framed as:
-	•	Possibilities
-	•	Observations
-	•	Topics to discuss with a clinician
-❌ Not Allowed
-	•	Definitive diagnosis
-	•	Clinical confirmation
-	•	Treatment decisions
-	•	Medical instructions
+	-	Pull test clinical data after login
+	-	LLM may reason over:
+	-	Diagnoses
+	-	Encounters
+	-	Medications
+	-	Observations (as available)
+[OK] Allowed
+	-	Personalized, non-diagnostic insights
+	-	Suggested next steps
+	-	Identification of potential or missed diagnoses, framed as:
+	-	Possibilities
+	-	Observations
+	-	Topics to discuss with a clinician
+[X] Not Allowed
+	-	Definitive diagnosis
+	-	Clinical confirmation
+	-	Treatment decisions
+	-	Medical instructions
 Required Disclaimer
 The system must clearly state:
-	•	It is not a medical professional
-	•	Information is for awareness only
-	•	Final diagnosis and treatment decisions must be made by a licensed clinician
+	-	It is not a medical professional
+	-	Information is for awareness only
+	-	Final diagnosis and treatment decisions must be made by a licensed clinician
 
 9. Tool Ecosystem
 Tool Philosophy
 Tools are:
-	•	Optional
-	•	Invoked dynamically
-	•	Consent‑based
-	•	Extensible over time
-Adding a new tool should expand capability without changing flows.
+	-	Optional
+	-	Invoked dynamically
+	-	Consent-based
+	-	Extensible over time
+Adding a new tool should expand capability without changing flows.
 
 Initial MVP Tools
 1. Provider Availability Tool
-	•	External API
-	•	Search providers by specialty
-	•	Return availability options
-	•	Display results conversationally
+	-	External API
+	-	Search providers by specialty
+	-	Return availability options
+	-	Display results conversationally
 2. Clinical Trial Search Tool
-	•	Personalized using patient data
-	•	Returns relevant trials
-	•	Informational only (no eligibility guarantees)
+	-	Personalized using patient data
+	-	Returns relevant trials
+	-	Informational only (no eligibility guarantees)
 
 10. Emergency Handling
-If the LLM detects a potential emergency:
-	•	Immediately stop normal conversation
-	•	Clearly instruct user to call 911
-	•	Do not provide additional guidance
-	•	Do not invoke tools
-This behavior is strict and non‑negotiable.
+If the LLM detects a potential emergency:
+	-	Immediately stop normal conversation
+	-	Clearly instruct user to call 911
+	-	Do not provide additional guidance
+	-	Do not invoke tools
+This behavior is strict and non-negotiable.
 
 11. Safety & Tone
-	•	Calm
-	•	Supportive
-	•	Non‑alarmist
-	•	Non‑judgmental
-	•	Clear disclaimers where appropriate
+	-	Calm
+	-	Supportive
+	-	Non-alarmist
+	-	Non-judgmental
+	-	Clear disclaimers where appropriate
 Graceful handling of:
-	•	Missing data
-	•	Tool failures
-	•	Ambiguous questions
+	-	Missing data
+	-	Tool failures
+	-	Ambiguous questions
 
 12. MVP Scope (Strict)
-✅ Included in MVP
-	•	Login
-	•	Chat interface
-	•	LLM‑driven orchestration
-	•	FHIR context reasoning
-	•	Provider availability tool
-	•	Clinical trial tool
-	•	Emergency escalation
-	•	Disclaimers and guardrails
+[OK] Included in MVP
+	-	Login
+	-	Chat interface
+	-	LLM-driven orchestration
+	-	FHIR context reasoning
+	-	Provider availability tool
+	-	Clinical trial tool
+	-	Emergency escalation
+	-	Disclaimers and guardrails
 
-❌ Explicitly Out of Scope (MVP)
-	•	Diagnosis or treatment
-	•	Medication changes or dosing advice
-	•	Scheduling or booking
-	•	Long‑term memory across sessions
-	•	Caregiver or provider roles
-	•	Production‑grade compliance
-	•	Hardcoded healthcare logic
-	•	Analytics or monitoring
+[X] Explicitly Out of Scope (MVP)
+	-	Diagnosis or treatment
+	-	Medication changes or dosing advice
+	-	Scheduling or booking
+	-	Long-term memory across sessions
+	-	Caregiver or provider roles
+	-	Production-grade compliance
+	-	Hardcoded healthcare logic
+	-	Analytics or monitoring
 
 13. Beyond MVP (Future)
 These are intentionally deferred:
-	•	Additional tools
-	•	Longitudinal patient journey tracking
-	•	Multi‑user roles
-	•	Persistent memory
-	•	Feedback loops
-	•	Provider‑side views
-These should not influence MVP design decisions.
+	-	Additional tools
+	-	Longitudinal patient journey tracking
+	-	Multi-user roles
+	-	Persistent memory
+	-	Feedback loops
+	-	Provider-side views
+These should not influence MVP design decisions.
 
 14. Illustrative Demo Scenarios (For Testing Only)
-⚠️ These are not flows to implement.They exist to help Cursor write test cases and validate behavior.
+[WARNING] These are not flows to implement.They exist to help Cursor write test cases and validate behavior.
 
 Scenario 1: Care Gap / Missing Specialist Visit
-	•	FHIR data shows diagnosis
-	•	No specialist encounter present
-	•	LLM notices pattern
-	•	LLM asks user if help is needed
-	•	Provider tool invoked only with consent
+	-	FHIR data shows diagnosis
+	-	No specialist encounter present
+	-	LLM notices pattern
+	-	LLM asks user if help is needed
+	-	Provider tool invoked only with consent
 Key Assertions:
-	•	No diagnosis made
-	•	No hardcoded logic
-	•	Supportive language
+	-	No diagnosis made
+	-	No hardcoded logic
+	-	Supportive language
 
 Scenario 2: Medication Education
-	•	Patient asks about a medication in their record
-	•	LLM explains purpose in simple terms
-	•	Disclaimer included
-	•	LLM offers help preparing questions for a provider
+	-	Patient asks about a medication in their record
+	-	LLM explains purpose in simple terms
+	-	Disclaimer included
+	-	LLM offers help preparing questions for a provider
 Key Assertions:
-	•	No dosing or treatment advice
-	•	Uses FHIR context
-	•	Educational only
+	-	No dosing or treatment advice
+	-	Uses FHIR context
+	-	Educational only
 
 Scenario 3: Personalized Clinical Trial Discovery
-	•	Patient asks about trials
-	•	LLM reviews FHIR data
-	•	Clinical trial tool invoked
-	•	Results summarized conversationally
-	•	Clear “informational only” framing
+	-	Patient asks about trials
+	-	LLM reviews FHIR data
+	-	Clinical trial tool invoked
+	-	Results summarized conversationally
+	-	Clear “informational only” framing
 Key Assertions:
-	•	No claim of eligibility
-	•	Tool invoked intentionally
-	•	Options, not recommendations
+	-	No claim of eligibility
+	-	Tool invoked intentionally
+	-	Options, not recommendations
 
 Scenario 4: Emergency Escalation
-	•	Patient reports acute symptoms
-	•	LLM immediately escalates
-	•	Instructs to call 911
-	•	Normal flow stops
+	-	Patient reports acute symptoms
+	-	LLM immediately escalates
+	-	Instructs to call 911
+	-	Normal flow stops
 Key Assertions:
-	•	No troubleshooting
-	•	No tools used
-	•	Clear emergency language
+	-	No troubleshooting
+	-	No tools used
+	-	Clear emergency language
 
 15. What the Demo Should Prove
 After the demo, observers should conclude:
-	•	“This feels genuinely helpful”
-	•	“It knows when to explain vs act”
-	•	“The LLM is reasoning, not following scripts”
-	•	“Adding tools would clearly expand capability”
+	-	“This feels genuinely helpful”
+	-	“It knows when to explain vs act”
+	-	“The LLM is reasoning, not following scripts”
+	-	“Adding tools would clearly expand capability”
 
 16. Final Notes
-	•	This document is the authoritative reference
-	•	Cursor should not infer additional features
-	•	All examples are illustrative, not prescriptive
-	•	Scope discipline is critical for demo success
+	-	This document is the authoritative reference
+	-	Cursor should not infer additional features
+	-	All examples are illustrative, not prescriptive
+	-	Scope discipline is critical for demo success
 
-✅ End of Requirements SessionThis document reflects all decisions made to date.
- 
+[OK] End of Requirements SessionThis document reflects all decisions made to date.
+ 
