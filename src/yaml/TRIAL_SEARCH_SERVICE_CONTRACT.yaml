@@ -1,0 +1,322 @@
+openapi: 3.0.3
+info:
+  title: Clinical Trial Search Service API (Test Server)
+  description: |
+    **⚠️ TEST SERVER ONLY - NOT FOR PRODUCTION USE ⚠️**
+    
+    Service contract for searching clinical trials using vector-based search. This API provides
+    access to real clinical trial data from the ClinicalTrials.gov database, but the service
+    itself is a test/prototype server intended for development and demonstration purposes only.
+    
+    **IMPORTANT**: This is a test/prototype server. While the clinical trial data returned is
+    real data from ClinicalTrials.gov, the service infrastructure is for testing only and should
+    not be used in production environments.
+    
+    **Protocol**: HTTP (no SSL/TLS) - for prototype use only
+    
+    **Base URL**: http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov/VectorTrialSearch
+    
+    **Note**: All studies in the index are limited to the United States. The country parameter
+    is available but has no effect on search results.
+  version: 1.0.0
+  contact:
+    name: Health Companion Team
+    email: support@healthcompanion.example.com
+
+servers:
+  - url: http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov/VectorTrialSearch
+    description: Test Clinical Trial Search Server (Test/Prototype Only - Not for Production)
+
+tags:
+  - name: TrialSearch
+    description: Clinical trial search operations
+
+paths:
+  /:
+    post:
+      tags:
+        - TrialSearch
+      summary: Search for clinical trials
+      description: |
+        Searches for clinical trials using vector-based search with natural language query text.
+        Returns matching clinical trials with relevance scores.
+        
+        **Note**: This is a test/prototype endpoint. The data returned is real clinical trial
+        data from ClinicalTrials.gov, but the service infrastructure is for testing only.
+        
+        All studies in the index are limited to the United States.
+      operationId: searchTrials
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TrialSearchRequest'
+            examples:
+              basic_search:
+                summary: Basic search with query text only
+                value:
+                  queryText: "diabetes type 2 treatment"
+              search_with_location:
+                summary: Search with location filters
+                value:
+                  queryText: "cystic fibrosis diabetes genetic modifiers"
+                  state: "Maryland"
+                  city: "Baltimore"
+                  maxRows: 10
+              search_with_max_rows:
+                summary: Search with custom result limit
+                value:
+                  queryText: "cancer immunotherapy"
+                  maxRows: 50
+      responses:
+        '200':
+          description: |
+            Successful search. Returns an array of matching clinical trials with relevance scores.
+            The data is real clinical trial information from ClinicalTrials.gov.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrialSearchResponse'
+              examples:
+                success_response:
+                  summary: Successful search results
+                  description: |
+                    Example response showing a single matching clinical trial with all fields.
+                  value:
+                    - NCTID: "NCT01113216"
+                      SearchText: "TITLE: Genetic Modifiers of Cystic Fibrosis Related Diabetes\nCONDITIONS: Cystic Fibrosis Related Diabetes\nINTERVENTIONS: \nSUMMARY: This research is being done to find the genes and other factors that are responsible for differences among persons with cystic fibrosis. We are particularly interested in the factors that relate to the development of Cystic Fibrosis Related Diabetes (CFRD).\nDETAILED DESCRIPTION: The study is recruiting people with cystic fibrosis (CF). The medical record is being extracted, and a blood sample is taken for DNA. The DNA samples are tested for variation both at the cystic fibrosis transmembrane conductance regulator (CFTR) gene (the CF gene) and over the entire rest of the genome. Using large numbers of people with CF, and knowing who does and does not have CFRD, we identify genetic variations that associate with CFRD. Knowing these variations allows us to better understand the causes of CFRD, and with enough information, better to predict CFRD and identify people at particularly high or low risk of CFRD. People participating in this study also have the option to participate in related studies of other metabolic traits in CF such as over- and underweight.\nELIGIBILITY: Inclusion Criteria:\n\n* Any person with Cystic Fibrosis and his/her parents.\n\nExclusion Criteria:\n\n* None\nLOCATIONS: Baltimore,Chicago,Minneapolis, Illinois,Maryland,Minnesota, United States\nSTATUS: \nPHASE: "
+                      Countries: "United States"
+                      States: "Illinois,Maryland,Minnesota"
+                      Cities: "Baltimore,Chicago,Minneapolis"
+                      Score: ".51288384199142456054"
+        '400':
+          description: |
+            Bad Request. The request was malformed or invalid.
+            Common causes: missing required queryText parameter, invalid parameter types.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              examples:
+                missing_query_text:
+                  summary: Missing required queryText
+                  value:
+                    error: "Missing required parameter: queryText"
+                invalid_max_rows:
+                  summary: Invalid maxRows value
+                  value:
+                    error: "Invalid maxRows: must be a positive integer"
+        '500':
+          description: |
+            Internal server error. The trial search service encountered an unexpected error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    TrialSearchRequest:
+      type: object
+      required:
+        - queryText
+      properties:
+        queryText:
+          type: string
+          description: |
+            Required. English description of what to search for. This is the natural language
+            query that will be used for vector-based search against clinical trial data.
+          example: "diabetes type 2 treatment"
+          minLength: 1
+        country:
+          type: string
+          description: |
+            Optional. Country filter (string). Note: All studies in the index are limited to
+            the United States, so this parameter has no effect on search results, unless if the trial
+            is international..
+          example: "United States"
+        state:
+          type: string
+          description: |
+            Optional. State filter (string). Filters results to trials in the specified state.
+          example: "Maryland"
+        city:
+          type: string
+          description: |
+            Optional. City filter (string). Filters results to trials in the specified city.
+          example: "Baltimore"
+        maxRows:
+          type: integer
+          description: |
+            Optional. Maximum number of results to return. Default is 25 if not specified.
+          minimum: 1
+          maximum: 1000
+          default: 25
+          example: 25
+      example:
+        queryText: "diabetes type 2 treatment"
+        state: "Maryland"
+        city: "Baltimore"
+        maxRows: 25
+
+    TrialSearchResponse:
+      type: array
+      description: |
+        Array of matching clinical trials. Results are ordered by relevance score (highest first).
+        Each trial contains real data from ClinicalTrials.gov.
+      items:
+        $ref: '#/components/schemas/TrialResult'
+      example:
+        - NCTID: "NCT01113216"
+          SearchText: "TITLE: Genetic Modifiers of Cystic Fibrosis Related Diabetes\nCONDITIONS: Cystic Fibrosis Related Diabetes\nINTERVENTIONS: \nSUMMARY: This research is being done to find the genes and other factors that are responsible for differences among persons with cystic fibrosis. We are particularly interested in the factors that relate to the development of Cystic Fibrosis Related Diabetes (CFRD).\nDETAILED DESCRIPTION: The study is recruiting people with cystic fibrosis (CF). The medical record is being extracted, and a blood sample is taken for DNA. The DNA samples are tested for variation both at the cystic fibrosis transmembrane conductance regulator (CFTR) gene (the CF gene) and over the entire rest of the genome. Using large numbers of people with CF, and knowing who does and does not have CFRD, we identify genetic variations that associate with CFRD. Knowing these variations allows us to better understand the causes of CFRD, and with enough information, better to predict CFRD and identify people at particularly high or low risk of CFRD. People participating in this study also have the option to participate in related studies of other metabolic traits in CF such as over- and underweight.\nELIGIBILITY: Inclusion Criteria:\n\n* Any person with Cystic Fibrosis and his/her parents.\n\nExclusion Criteria:\n\n* None\nLOCATIONS: Baltimore,Chicago,Minneapolis, Illinois,Maryland,Minnesota, United States\nSTATUS: \nPHASE: "
+          Countries: "United States"
+          States: "Illinois,Maryland,Minnesota"
+          Cities: "Baltimore,Chicago,Minneapolis"
+          Score: ".51288384199142456054"
+
+    TrialResult:
+      type: object
+      description: |
+        A single clinical trial result. Contains real data from ClinicalTrials.gov.
+        The SearchText field contains structured information about the trial including title,
+        conditions, interventions, summary, detailed description, eligibility criteria,
+        locations, status, and phase.
+      properties:
+        NCTID:
+          type: string
+          description: |
+            ClinicalTrials.gov identifier (NCT ID). Unique identifier for the clinical trial.
+          example: "NCT01113216"
+          pattern: "^NCT[0-9]{8}$"
+        SearchText:
+          type: string
+          description: |
+            Comprehensive trial information in structured text format. Contains:
+            - TITLE: Trial title
+            - CONDITIONS: Medical conditions studied
+            - INTERVENTIONS: Interventions/treatments
+            - SUMMARY: Brief summary
+            - DETAILED DESCRIPTION: Full description
+            - ELIGIBILITY: Inclusion and exclusion criteria
+            - LOCATIONS: Trial locations
+            - STATUS: Trial status
+            - PHASE: Trial phase
+          example: "TITLE: Genetic Modifiers of Cystic Fibrosis Related Diabetes\nCONDITIONS: Cystic Fibrosis Related Diabetes\nINTERVENTIONS: \nSUMMARY: This research is being done to find the genes..."
+        Countries:
+          type: string
+          description: |
+            Comma-separated list of countries where the trial is conducted.
+            Note: All studies in the index are limited to the United States.
+          example: "United States"
+        States:
+          type: string
+          description: |
+            Comma-separated list of states where the trial is conducted.
+          example: "Illinois,Maryland,Minnesota"
+        Cities:
+          type: string
+          description: |
+            Comma-separated list of cities where the trial is conducted.
+          example: "Baltimore,Chicago,Minneapolis"
+        Score:
+          type: string
+          description: |
+            Relevance score for this trial match. Higher scores indicate better matches.
+            Format is a decimal string.
+          example: ".51288384199142456054"
+      required:
+        - NCTID
+        - SearchText
+        - Countries
+        - States
+        - Cities
+        - Score
+
+    ErrorResponse:
+      type: object
+      description: Error response from the trial search service
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong
+          example: "Missing required parameter: queryText"
+      required:
+        - error
+
+# Example Request/Response Documentation
+# ======================================
+#
+# Example: Basic Trial Search
+# ---------------------------
+# POST / HTTP/1.1
+# Host: ec2-98-82-129-136.compute-1.amazonaws.com
+# Content-Type: application/json
+#
+# {
+#   "queryText": "diabetes type 2 treatment"
+# }
+#
+# curl -X POST \
+#   "http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov/VectorTrialSearch/" \
+#   -H "Content-Type: application/json" \
+#   -d '{"queryText": "diabetes type 2 treatment"}'
+#
+# Example: Search with Location Filters
+# -------------------------------------
+# POST / HTTP/1.1
+# Host: ec2-98-82-129-136.compute-1.amazonaws.com
+# Content-Type: application/json
+#
+# {
+#   "queryText": "cystic fibrosis diabetes genetic modifiers",
+#   "state": "Maryland",
+#   "city": "Baltimore",
+#   "maxRows": 10
+# }
+#
+# curl -X POST \
+#   "http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov/VectorTrialSearch/" \
+#   -H "Content-Type: application/json" \
+#   -d '{
+#     "queryText": "cystic fibrosis diabetes genetic modifiers",
+#     "state": "Maryland",
+#     "city": "Baltimore",
+#     "maxRows": 10
+#   }'
+#
+# Example Python Request:
+# -----------------------
+# import requests
+#
+# base_url = "http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov/VectorTrialSearch"
+#
+# # Basic search
+# response = requests.post(
+#     f"{base_url}/",
+#     json={
+#         "queryText": "diabetes type 2 treatment"
+#     },
+#     headers={"Content-Type": "application/json"}
+# )
+#
+# trials = response.json()
+# for trial in trials:
+#     print(f"NCT ID: {trial['NCTID']}")
+#     print(f"Score: {trial['Score']}")
+#     print(f"States: {trial['States']}")
+#
+# # Search with filters
+# response = requests.post(
+#     f"{base_url}/",
+#     json={
+#         "queryText": "cancer immunotherapy",
+#         "state": "California",
+#         "maxRows": 50
+#     },
+#     headers={"Content-Type": "application/json"}
+# )
+#
+# Note: This is a test/prototype service. The data returned is real clinical trial
+# information from ClinicalTrials.gov, but the service infrastructure is for testing only.
+
