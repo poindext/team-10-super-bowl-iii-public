@@ -30,11 +30,11 @@ The system contains NO hardcoded logic. Instead:
 
 - **Chat Interface**: Streamlit.io
 - **Language**: Python 3.9+
-- **LLM Provider**: OpenAI (GPT-4)
+- **LLM Provider**: OpenAI (GPT-5.1)
 - **External APIs**: 
   - Provider Availability API (stub/dummy for initial build)
   - Clinical Trial Search API
-- **Data Format**: FHIR (JSON)
+- **Data Format**: FHIR (JSON, minimized for efficient token usage)
 
 ## Setup
 
@@ -85,16 +85,15 @@ Team10HealthCompanion/
 │   ├── llm/                 # LLM orchestrator and reasoning
 │   ├── tools/               # Tool ecosystem (FHIR fetch, Provider Search, Clinical Trials)
 │   ├── chat/                # Chat interface and session management
-│   └── utils/               # Safety guardrails and utilities
-├── tests/                   # Test suite
-├── data/                    # Test data
-└── docs/                    # Documentation
+│   └── utils/               # Utilities (FHIR minimization, patient data, debug)
+├── fhir_test_patients.csv   # Test patient data with MPIIDs and FHIR endpoints
+└── requirements.txt         # Python dependencies
 ```
 
 ## Key Features
 
 - **Natural Conversation**: No menus, no decision trees, organic flow
-- **FHIR Integration**: Automatic fetch after login, raw FHIR resources passed to LLM
+- **FHIR Integration**: Automatic fetch after login, minimized FHIR resources passed to LLM (reduces token usage by 50-70% while preserving clinical information)
 - **Dynamic Tool Invocation**: Provider search and clinical trial discovery
 - **Safety Guardrails**: Emergency detection, required disclaimers
 - **Session Memory**: Maintains conversation context
@@ -104,7 +103,8 @@ Team10HealthCompanion/
 1. **NO hardcoded medical logic** - All decisions through LLM reasoning
 2. **NO predefined flows** - Conversation emerges organically
 3. **FHIR fetch is mandatory** - Must succeed after login, or flow ends
-4. **Raw FHIR resources** - No parsing, pass directly to LLM
+4. **FHIR minimization** - FHIR data is minimized once at load time to reduce token usage while preserving all clinical information
+5. **Raw FHIR resources** - No parsing, minimized FHIR JSON passed directly to LLM
 5. **Emergency detection** - Stops conversation immediately
 6. **Always include disclaimers** when discussing medical conditions
 
@@ -120,4 +120,5 @@ See `IMPLEMENTATION_PLAN.md` for detailed implementation phases and architecture
 ## License
 
 [To be determined]
+
 

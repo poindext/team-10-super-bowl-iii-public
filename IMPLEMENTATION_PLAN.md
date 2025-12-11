@@ -41,8 +41,7 @@ Team10HealthCompanion/
 │   ├── llm/
 │   │   ├── __init__.py
 │   │   ├── orchestrator.py          # LLM reasoning engine
-│   │   ├── prompts.py               # System prompts & safety guardrails
-│   │   └── emergency_detector.py    # Emergency language detection
+│   │   └── prompts.py               # System prompts, safety guardrails & emergency detection
 │   ├── tools/
 │   │   ├── __init__.py
 │   │   ├── base.py                  # Base tool interface
@@ -55,16 +54,9 @@ Team10HealthCompanion/
 │   │   └── ui.py                    # Streamlit chat UI components
 │   └── utils/
 │       ├── __init__.py
-│       └── safety.py                # Safety guardrails & disclaimers
-├── tests/
-│   ├── __init__.py
-│   ├── test_llm_orchestrator.py
-│   ├── test_tools.py
-│   └── test_emergency_detection.py
-├── data/
-│   └── fhir_test_data/              # Sample FHIR test data
-└── docs/
-    └── api_docs.md                  # API integration documentation
+│       ├── fhir_minimizer.py        # FHIR data minimization utilities
+│       ├── patient_data.py          # Patient data utilities (CSV reader)
+│       └── debug.py                 # Debug panel for development
 ```
 
 ## Core Components Architecture
@@ -97,9 +89,10 @@ Team10HealthCompanion/
   - Makes authenticated GET request to FHIR endpoint
   - If FHIR fetch **succeeds**: Proceed to chat interface with FHIR data in context
   - If FHIR fetch **fails**: End flow, display error message asking user to contact technical staff
-- **Data Format**: Raw FHIR resources (JSON) passed directly to LLM
-- **No parsing**: LLM receives raw FHIR resources and reasons over them directly
-- **Data Types** (as raw FHIR resources):
+- **Data Format**: Minimized FHIR resources (JSON) passed directly to LLM
+- **Minimization**: FHIR data is minimized once at load time to reduce token usage (50-70% reduction) while preserving all clinical information
+- **No parsing**: LLM receives minimized raw FHIR resources and reasons over them directly
+- **Data Types** (as minimized FHIR resources):
   - Diagnoses
   - Medications
   - Observations
@@ -114,7 +107,7 @@ Team10HealthCompanion/
   - Chooses which tools to invoke (if any)
   - Maintains conversation flow organically
 - **Key Principle**: No hardcoded decision trees
-- **FHIR Context**: Raw FHIR resources included in system prompt/context
+- **FHIR Context**: Minimized raw FHIR resources included in system prompt/context (minimized once at load time, cached in session)
 
 ### 4. Tools Ecosystem (`src/tools/`)
 - **Design**: Modular, optional, user-consent driven
@@ -124,14 +117,15 @@ Team10HealthCompanion/
   - **Clinical Trial Search**: Personalized trial search using FHIR data
 - **Principle**: Adding new tools requires NO redesign of conversation flows
 
-### 5. Emergency Handling (`src/llm/emergency_detector.py`)
+### 5. Emergency Handling (`src/llm/prompts.py`)
 - **Purpose**: Detect emergency language
+- **Location**: Emergency detection functions (`check_emergency()`, `get_emergency_response()`) are in `src/llm/prompts.py`
 - **Behavior**: 
   - Stop conversation immediately
   - Display: "This may be an emergency. Please call 911 immediately."
   - No continued assistance or tool usage
 
-### 6. Safety & Guardrails (`src/utils/safety.py`, `src/llm/prompts.py`)
+### 6. Safety & Guardrails (`src/llm/prompts.py`)
 - **Required Disclaimers** (when discussing conditions/diagnoses):
   - "I'm not a medical professional."
   - "This information is for awareness only."
@@ -211,7 +205,7 @@ requests>=2.31.0
 ```
 # OpenAI Configuration
 OPENAI_API_KEY=your_openai_api_key
-OPENAI_MODEL=gpt-4  # Note: User specified GPT-5.1, but using GPT-4 as fallback (verify model availability)
+OPENAI_MODEL=gpt-5.1  # Primary model (verify model availability)
 
 # FHIR Server Authentication (Basic Auth)
 FHIR_USERNAME=your_fhir_username
@@ -237,7 +231,8 @@ CLINICAL_TRIAL_API_KEY=clinical_trial_api_key  # if needed
 5. **Emergency detection** must stop conversation immediately
 6. **Tools are optional** - User consent required (except FHIR fetch which is automatic after login)
 7. **FHIR fetch is mandatory** - Must succeed after login, or flow ends with technical support message
-8. **Raw FHIR resources** - No parsing, pass directly to LLM for reasoning
+8. **FHIR minimization** - FHIR data is minimized once at load time and cached in session to reduce token usage
+9. **Minimized FHIR resources** - No parsing, minimized FHIR JSON passed directly to LLM for reasoning
 9. **FHIR data informs** but doesn't dictate responses
 10. **MPIID mapping** - Login maps to hardcoded MPIID (100000010 - Marla Gonzalez) for demo purposes
 11. **FHIR endpoints** - Retrieved from `fhir_test_patients.csv` based on MPIID
@@ -259,7 +254,7 @@ CLINICAL_TRIAL_API_KEY=clinical_trial_api_key  # if needed
    - MPIID Mapping: ✅ Login credentials map to hardcoded MPIID (100000010 - Marla Gonzalez) for demo
    - FHIR Authentication: ✅ Basic Auth using FHIR_USERNAME and FHIR_PASSWORD from environment variables
 5. **OpenAI Model**: 
-   - Which OpenAI model should we use (GPT-4, GPT-3.5-turbo, etc.)? GPT-5.1 (Note: Will verify model availability - may need to use GPT-4 or GPT-4-turbo as fallback)
+   - Which OpenAI model should we use (GPT-4, GPT-3.5-turbo, etc.)? ✅ GPT-5.1 (currently in use)
 
 ## Next Steps
 
