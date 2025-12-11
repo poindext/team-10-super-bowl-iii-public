@@ -1,0 +1,18 @@
+# Core Framework
+streamlit>=1.28.0
+
+# LLM Provider
+openai>=1.0.0
+
+# Environment Management
+python-dotenv>=1.0.0
+
+# HTTP Requests
+requests>=2.31.0
+
+# Note: No FHIR parsing library needed - raw FHIR JSON passed directly to LLM
+
+# Additional utilities (if needed)
+# pydantic>=2.0.0  # For data validation
+# typing-extensions>=4.8.0  # For type hints
+
