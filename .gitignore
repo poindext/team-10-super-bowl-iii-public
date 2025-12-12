@@ -42,3 +42,13 @@ htmlcov/
 
 # Jupyter Notebooks
 .ipynb_checkpoints
+
+# NPPES Data Files (large data files, not in repository)
+../NPPES_*.zip
+../NPPES_*.txt
+../NPPES_*.dat
+../analyze_nppes.py
+
+# Test scripts (not in repository)
+../test_*.py
+../*_test.py

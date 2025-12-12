@@ -1,0 +1,672 @@
+openapi: 3.0.3
+info:
+  title: HealthShare Provider Directory API - Individual Provider Methods
+  description: |
+    **⚠️ TEST SERVER ONLY - NOT FOR PRODUCTION USE ⚠️**
+    
+    Service contract for HealthShare Provider Directory REST API focusing on Individual Provider
+    operations. This API provides access to provider directory data for searching and retrieving
+    individual provider records.
+    
+    **IMPORTANT**: This is a test server. The service infrastructure is for testing only and should
+    not be used in production environments.
+    
+    **Base URL**: http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov
+    
+    **Note**: This contract documents the Individual provider methods only. Other methods
+    (Organization, Address, Network, Plan) are not included in this contract.
+    
+    **Authentication**: HTTP Basic Authentication is required for all requests.
+    Provide username and password in the Authorization header.
+    Format: Authorization: Basic base64(username:password)
+  version: 1.0.0
+  contact:
+    name: Health Companion Team
+    email: support@healthcompanion.example.com
+
+servers:
+  - url: http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov
+    description: HealthShare Provider Directory API (Test Server)
+
+tags:
+  - name: Search Individual
+    description: Search operations for Individual providers
+  - name: Retrieve Individual
+    description: Retrieve operations for Individual provider records
+
+paths:
+  /ProviderSearch:
+    get:
+      tags:
+        - Search Individual
+      summary: Search and display a list of master records of type Individual
+      description: |
+        Search and display a list of master records of type Individual Provider.
+        
+        **Important**: At least one of the query parameters other than `inactive`, `maxresults`,
+        `newSearch`, `offset`, `sortby`, or `sortorder` must be passed in.
+      operationId: searchIndividual
+      security:
+        - BasicAuth: []
+      parameters:
+        - name: inactive
+          in: query
+          description: |
+            Whether to include inactive records in the search (1) or not (0).
+          required: false
+          schema:
+            type: integer
+            enum: [0, 1]
+            default: 0
+        - name: maxresults
+          in: query
+          description: |
+            A maximum number of results. If not supplied, the server chooses a maximum.
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+        - name: newSearch
+          in: query
+          description: |
+            Whether to use cached search results (0) or perform a new search (1). If the database
+            changes, perform a new search to see the changes.
+          required: false
+          schema:
+            type: integer
+            enum: [0, 1]
+            default: 0
+        - name: offset
+          in: query
+          description: |
+            How many records to offset by for pagination.
+          required: false
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+        - name: sortby
+          in: query
+          description: |
+            Sort results by the specified property.
+          required: false
+          schema:
+            type: integer
+        - name: sortorder
+          in: query
+          description: |
+            Sort results in ascending (ASC) or descending (DESC) order.
+          required: false
+          schema:
+            type: string
+            enum: [ASC, DESC]
+        - name: accepting
+          in: query
+          description: |
+            Whether the individual is accepting new patients (1) or not (0).
+          required: false
+          schema:
+            type: integer
+            enum: [0, 1]
+        - name: addressLine
+          in: query
+          description: |
+            The street address of the individual.
+          required: false
+          schema:
+            type: string
+        - name: city
+          in: query
+          description: |
+            The city of the individual.
+          required: false
+          schema:
+            type: string
+        - name: country
+          in: query
+          description: |
+            The country of the individual, as a coded value.
+          required: false
+          schema:
+            type: string
+        - name: eid
+          in: query
+          description: |
+            The enterprise ID of the individual.
+          required: false
+          schema:
+            type: string
+        - name: gender
+          in: query
+          description: |
+            The gender of the individual, as a coded value.
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          description: |
+            An identifier for the individual, such as an enterprise ID or NPI.
+          required: false
+          schema:
+            type: string
+        - name: language
+          in: query
+          description: |
+            The language spoken by the individual, as a coded value.
+          required: false
+          schema:
+            type: string
+        - name: locType
+          in: query
+          description: |
+            The type of location for the individual, as a coded value.
+          required: false
+          schema:
+            type: string
+        - name: name
+          in: query
+          description: |
+            The name of the individual.
+          required: false
+          schema:
+            type: string
+        - name: network
+          in: query
+          description: |
+            The identifier of the network to which the individual belongs.
+          required: false
+          schema:
+            type: string
+        - name: npi
+          in: query
+          description: |
+            The NPI (National Provider Identifier) of the individual.
+          required: false
+          schema:
+            type: string
+            pattern: '^[0-9]{10}$'
+        - name: otherId-aa
+          in: query
+          description: |
+            The assigning authority associated with any of the individual's other identifiers,
+            as a coded value.
+          required: false
+          schema:
+            type: string
+        - name: otherId-id
+          in: query
+          description: |
+            An identifier for the individual.
+          required: false
+          schema:
+            type: string
+        - name: otherId-type
+          in: query
+          description: |
+            The type of identifier for the individual, as a coded value.
+          required: false
+          schema:
+            type: string
+        - name: plan
+          in: query
+          description: |
+            The identifier of the plan to which the individual belongs.
+          required: false
+          schema:
+            type: string
+        - name: specialty
+          in: query
+          description: |
+            The specialty or specialties of the individual, as a coded value. Enter multiple
+            specialties in a comma-separated list.
+          required: false
+          schema:
+            type: string
+        - name: state
+          in: query
+          description: |
+            The state of the individual, as a coded value.
+          required: false
+          schema:
+            type: string
+        - name: zip
+          in: query
+          description: |
+            The ZIP or postal code for the individual. Accepts a partial code.
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: |
+            Successful response. Returns a list of Individual provider records matching the search criteria.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SearchIndividual'
+              examples:
+                success_response:
+                  summary: Example search results
+                  value:
+                    - EnterpriseID: "123456"
+                      NPI: "1234567890"
+                      Name:
+                        First: "John"
+                        Last: "Doe"
+                        Middle: "M"
+                      PrimarySpecialtyCodedValue:
+                        Code: "207Q00000X"
+                        Description: "Family Medicine"
+                      Addresses:
+                        - AddressLine1: "123 Main St"
+                          City: "Boston"
+                          State: "MA"
+                          Zip: "02101"
+        '401':
+          description: |
+            Unauthorized. Authentication failed. Check that valid username and password
+            credentials are provided via HTTP Basic Authentication.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '400':
+          description: |
+            Bad request. This usually indicates:
+            - A syntax error, such as a missing required parameter
+            - An unrecognized query parameter is specified
+            - A character set error in the code
+            
+            **Note**: Some editing and email programs automatically convert the simple quotes used
+            in programming to the fancy variants used in typesetting. The difference can be hard to
+            notice visually. For single quote, use ASCII 39. For double quote, use ASCII 34.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: |
+            The server encountered one or more errors. This can occur if there are no search
+            parameters specified.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '502':
+          description: |
+            Bad Gateway. The production is not configured properly; for example a business component
+            is missing from the production.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '503':
+          description: |
+            Service Temporarily Unavailable. The call could not reach the server for a reason that
+            might not be true if the client retries the call later. A common reason for a 503
+            response is that the Ensemble production is not currently running. If a system
+            administrator is simply restarting the production to apply configuration changes, this
+            condition will only be true for a short time.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '504':
+          description: |
+            Server timeout. The call to the server did not complete in time. This timeout is
+            30 seconds long by default.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /ProviderSearch/{enterpriseId}:
+    get:
+      tags:
+        - Retrieve Individual
+      summary: Get the master record for an Individual
+      description: |
+        Gets the full contents of the master record for an individual provider.
+      operationId: getIndividualMaster
+      security:
+        - BasicAuth: []
+      parameters:
+        - name: enterpriseId
+          in: path
+          required: true
+          description: |
+            The EnterpriseID of the Individual.
+          schema:
+            type: string
+        - name: includeInactive
+          in: query
+          description: |
+            Whether to include inactive records in the search (1) or not (0).
+          required: false
+          schema:
+            type: integer
+            enum: [0, 1]
+            default: 0
+      responses:
+        '200':
+          description: |
+            Successful response. Returns the full master record for the Individual provider.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PullFullIndividualResponseItem'
+        '401':
+          description: |
+            Unauthorized. Authentication failed. Check that valid username and password
+            credentials are provided via HTTP Basic Authentication.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '400':
+          description: |
+            Bad request. This usually indicates:
+            - A syntax error, such as a missing required parameter
+            - An unrecognized query parameter is specified
+            - A character set error in the code
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: |
+            The server encountered one or more errors.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '502':
+          description: |
+            Bad Gateway. The production is not configured properly; for example a business component
+            is missing from the production.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '503':
+          description: |
+            Service Temporarily Unavailable. The call could not reach the server for a reason that
+            might not be true if the client retries the call later. A common reason for a 503
+            response is that the Ensemble production is not currently running.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '504':
+          description: |
+            Server timeout. The call to the server did not complete in time. This timeout is
+            30 seconds long by default.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: |
+        HTTP Basic Authentication is required for all requests.
+        Provide username and password in the Authorization header.
+        Format: Authorization: Basic base64(username:password)
+  schemas:
+    SearchIndividual:
+      type: object
+      description: |
+        Search Result Record for the entity type Individual. The object structure follows that of
+        the master record table for Individual. It provides a small number of data values from
+        that table, plus a small number of EID links followed to a small number of data values
+        from the referenced entity.
+      required:
+        - EnterpriseID
+      properties:
+        EnterpriseID:
+          type: string
+          description: |
+            EID from a row in a Local.PD.Domain.Individual table.
+          example: "123456"
+        NPI:
+          type: string
+          description: |
+            National Provider Identifier
+          example: "1234567890"
+        Name:
+          $ref: '#/components/schemas/OneName'
+        DateOfDeath:
+          type: string
+          description: |
+            Date Of Death of provider if exists.
+          format: date
+        PrimarySpecialtyCodedValue:
+          $ref: '#/components/schemas/OneCode'
+          description: |
+            Primary specialty coded value (CODENAME="HSPD.Specialty.MASTER")
+        ProviderTypesCodedValue:
+          type: array
+          description: |
+            Provider types coded values (CODENAME="HSPD.IndType.MASTER")
+          items:
+            $ref: '#/components/schemas/OneCode'
+        StatusCodedValue:
+          $ref: '#/components/schemas/OneCode'
+          description: |
+            Status coded value (CODENAME="HSPD.IndStatus.MASTER")
+        GenderCodedValue:
+          $ref: '#/components/schemas/OneCode'
+          description: |
+            Gender coded value (CODENAME="HSPD.Gender.MASTER")
+        Addresses:
+          type: array
+          description: |
+            Find all Locations for this Individual where LocationType = TypeCodedValue of PRAC
+            and get Address data via the AddressEID
+          items:
+            $ref: '#/components/schemas/OneAddress'
+
+    PullFullIndividualResponseItem:
+      type: object
+      description: |
+        A collection of entity records and their full information that are related to the queried
+        Individual Provider record. Each record type key is mapped to an object that has
+        EnterpriseIDs as keys and the full record information as the value.
+      properties:
+        Individual:
+          type: object
+          description: |
+            Individual provider records keyed by EnterpriseID
+          additionalProperties:
+            $ref: '#/components/schemas/PullIndividualFull'
+
+    PullIndividualFull:
+      type: object
+      description: |
+        Full master record information for an Individual provider. This contains comprehensive
+        details about the provider including demographics, specialties, addresses, affiliations,
+        and other related information.
+      properties:
+        EnterpriseID:
+          type: string
+          description: Enterprise ID of the individual
+        NPI:
+          type: string
+          description: National Provider Identifier
+        Name:
+          $ref: '#/components/schemas/OneName'
+        # Additional properties would be defined based on the full schema
+        # This is a simplified representation
+      additionalProperties: true
+
+    OneName:
+      type: object
+      description: Name information for an individual provider
+      properties:
+        First:
+          type: string
+          description: First name
+          example: "John"
+        Last:
+          type: string
+          description: Last name
+          example: "Doe"
+        Middle:
+          type: string
+          description: Middle name or initial
+          example: "M"
+        Prefix:
+          type: string
+          description: Name prefix (e.g., Dr., Mr., Ms.)
+        Suffix:
+          type: string
+          description: Name suffix (e.g., Jr., Sr., MD)
+
+    OneCode:
+      type: object
+      description: Coded value with code and description
+      properties:
+        Code:
+          type: string
+          description: The code value
+          example: "207Q00000X"
+        Description:
+          type: string
+          description: Human-readable description of the code
+          example: "Family Medicine"
+
+    OneAddress:
+      type: object
+      description: Address information
+      properties:
+        AddressLine1:
+          type: string
+          description: Street address line 1
+          example: "123 Main St"
+        AddressLine2:
+          type: string
+          description: Street address line 2 (apartment, suite, etc.)
+        City:
+          type: string
+          description: City name
+          example: "Boston"
+        State:
+          type: string
+          description: State code
+          example: "MA"
+        Zip:
+          type: string
+          description: ZIP or postal code
+          example: "02101"
+        Country:
+          type: string
+          description: Country code
+          example: "US"
+
+    Error:
+      type: object
+      description: Error response from the API
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong
+        code:
+          type: string
+          description: Error code
+        details:
+          type: string
+          description: Additional error details
+
+# Example Request/Response Documentation
+# ======================================
+#
+# Example: Search Individual by Name
+# -----------------------------------
+# GET /ProviderSearch?name=Smith&state=MA HTTP/1.1
+# Host: ec2-98-82-129-136.compute-1.amazonaws.com
+# Authorization: Basic base64(username:password)
+#
+# curl -X GET \
+#   "http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov/ProviderSearch?name=Smith&state=MA" \
+#   -H "Accept: application/json" \
+#   -u "username:password"
+#
+# Example: Search Individual by NPI
+# -----------------------------------
+# GET /ProviderSearch?npi=1234567890 HTTP/1.1
+# Host: ec2-98-82-129-136.compute-1.amazonaws.com
+# Authorization: Basic base64(username:password)
+#
+# curl -X GET \
+#   "http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov/ProviderSearch?npi=1234567890" \
+#   -H "Accept: application/json" \
+#   -u "username:password"
+#
+# Example: Search Individual by Specialty and Location
+# ----------------------------------------------------
+# GET /ProviderSearch?specialty=207Q00000X&city=Boston&state=MA HTTP/1.1
+# Host: ec2-98-82-129-136.compute-1.amazonaws.com
+# Authorization: Basic base64(username:password)
+#
+# curl -X GET \
+#   "http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov/ProviderSearch?specialty=207Q00000X&city=Boston&state=MA" \
+#   -H "Accept: application/json" \
+#   -u "username:password"
+#
+# Example: Get Individual Master Record
+# ---------------------------------------
+# GET /ProviderSearch/123456 HTTP/1.1
+# Host: ec2-98-82-129-136.compute-1.amazonaws.com
+# Authorization: Basic base64(username:password)
+#
+# curl -X GET \
+#   "http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov/ProviderSearch/123456" \
+#   -H "Accept: application/json" \
+#   -u "username:password"
+#
+# Example Python Request:
+# -----------------------
+# import requests
+# from requests.auth import HTTPBasicAuth
+#
+# base_url = "http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov"
+# username = "your_username"
+# password = "your_password"
+# auth = HTTPBasicAuth(username, password)
+#
+# # Search by name and state
+# response = requests.get(
+#     f"{base_url}/ProviderSearch",
+#     params={
+#         "name": "Smith",
+#         "state": "MA",
+#         "maxresults": 10
+#     },
+#     auth=auth,
+#     headers={"Accept": "application/json"}
+# )
+#
+# individuals = response.json()
+# for individual in individuals:
+#     print(f"NPI: {individual.get('NPI')}")
+#     print(f"Name: {individual.get('Name', {}).get('First')} {individual.get('Name', {}).get('Last')}")
+#
+# # Get full master record
+# enterprise_id = "123456"
+# response = requests.get(
+#     f"{base_url}/ProviderSearch/{enterprise_id}",
+#     auth=auth,
+#     headers={"Accept": "application/json"}
+# )
+#
+# master_record = response.json()
+#
+# Note: HTTP Basic Authentication is required for all requests. Provide username and password
+# via the Authorization header or use the -u flag with curl.
+
