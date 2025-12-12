@@ -10,9 +10,9 @@ import streamlit as st
 DEMO_USERNAME = "demo"
 DEMO_PASSWORD = "demo123"
 
-# Hardcoded MPIID mapping - all logins map to test patient Steve Burns
-DEFAULT_MPIID = "100000009"
-DEFAULT_PATIENT_NAME = "Steve Burns"
+# Hardcoded MPIID mapping - all logins map to test patient (MPIID: 100000021)
+DEFAULT_MPIID = "100000021"
+DEFAULT_PATIENT_NAME = "Patient 100000021"
 
 
 def is_authenticated():

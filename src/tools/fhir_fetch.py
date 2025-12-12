@@ -15,10 +15,12 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 from src.tools.base import BaseTool
-from src.utils.patient_data import get_patient_endpoint
 
 # Load environment variables
 load_dotenv()
+
+# FHIR Server Base URL
+FHIR_BASE_URL = "http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov/FHIRRepo"
 
 
 class FHIRFetchTool(BaseTool):
@@ -36,6 +38,18 @@ class FHIRFetchTool(BaseTool):
         """Get the name of the tool."""
         return "FHIR Fetch"
     
+    def _build_endpoint_url(self, mpiid: str) -> str:
+        """
+        Build FHIR endpoint URL for a patient MPIID.
+        
+        Args:
+            mpiid: Patient MPIID
+            
+        Returns:
+            Complete FHIR endpoint URL
+        """
+        return f"{FHIR_BASE_URL}/Patient/{mpiid}/$everything"
+    
     def execute(self, mpiid: str, timeout: int = 30) -> Dict[str, Any]:
         """
         Fetch FHIR data for a patient.
@@ -47,16 +61,14 @@ class FHIRFetchTool(BaseTool):
         Returns:
             Dictionary with 'success' (bool), 'data' (if success), or 'error' (if failure)
         """
-        # Get patient endpoint from CSV
-        patient_info = get_patient_endpoint(mpiid)
+        # Build endpoint URL from MPIID
+        endpoint_url = self._build_endpoint_url(mpiid)
         
-        if not patient_info:
-            return {
-                "success": False,
-                "error": f"Patient with MPIID {mpiid} not found in patient database"
-            }
-        
-        endpoint_url = patient_info['endpoint']
+        patient_info = {
+            'mpiid': mpiid,
+            'name': f'Patient {mpiid}',
+            'endpoint': endpoint_url
+        }
         
         try:
             # Make authenticated GET request

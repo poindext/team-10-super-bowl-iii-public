@@ -129,6 +129,39 @@ def minimize_resource(resource: Dict[str, Any]) -> Dict[str, Any]:
             minimized["birthDate"] = resource["birthDate"]
         if "gender" in resource:
             minimized["gender"] = resource["gender"]
+        # Keep address information (needed for provider search by ZIP code)
+        if "address" in resource:
+            addresses = resource["address"]
+            
+            def normalize_postal_code(postal_code):
+                """Normalize postal code to string and preserve leading zeros."""
+                if postal_code is None:
+                    return None
+                # Convert to string to preserve leading zeros
+                postal_str = str(postal_code).strip()
+                # If it's all digits and less than 5 characters, pad with leading zeros
+                if postal_str.isdigit() and len(postal_str) < 5:
+                    postal_str = postal_str.zfill(5)
+                return postal_str
+            
+            if isinstance(addresses, list):
+                # Keep first address (usually home address) with postal code
+                if len(addresses) > 0:
+                    first_addr = addresses[0]
+                    if isinstance(first_addr, dict):
+                        minimized["address"] = [{
+                            "postalCode": normalize_postal_code(first_addr.get("postalCode")),
+                            "city": first_addr.get("city"),
+                            "state": first_addr.get("state"),
+                            "line": first_addr.get("line", [])[:1] if isinstance(first_addr.get("line"), list) else first_addr.get("line")
+                        }]
+            elif isinstance(addresses, dict):
+                minimized["address"] = [{
+                    "postalCode": normalize_postal_code(addresses.get("postalCode")),
+                    "city": addresses.get("city"),
+                    "state": addresses.get("state"),
+                    "line": addresses.get("line", [])[:1] if isinstance(addresses.get("line"), list) else addresses.get("line")
+                }]
     
     return minimized
 

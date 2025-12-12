@@ -24,7 +24,7 @@ class LLMOrchestrator:
     """LLM orchestrator for reasoning and conversation management."""
     
     def __init__(self):
-        """Initialize the LLM orchestrator with OpenAI client."""
+        """Initialize the LLM orchestrator with OpenAI client and tools."""
         api_key = os.getenv("OPENAI_API_KEY")
         model = os.getenv("OPENAI_MODEL", "gpt-5.1")
         
@@ -34,6 +34,58 @@ class LLMOrchestrator:
         self.client = OpenAI(api_key=api_key)
         self.model = model
         self.system_prompt = SYSTEM_PROMPT
+        
+        # Initialize tools
+        self.tools = {}
+        self._initialize_tools()
+    
+    def _initialize_tools(self):
+        """Initialize available tools for the LLM."""
+        try:
+            from src.tools.provider_search import ProviderSearchTool
+            provider_tool = ProviderSearchTool()
+            self.tools['search_providers_by_zip'] = provider_tool
+            print("✅ Provider search tool initialized")
+        except ValueError as e:
+            # Credentials missing - tool not available but app can continue
+            print(f"⚠️  Provider search tool not available: {str(e)}")
+        except Exception as e:
+            # Other errors - log but continue
+            print(f"⚠️  Could not initialize provider search tool: {str(e)}")
+            # Continue without the tool - app should still work
+    
+    def _get_function_definitions(self) -> List[Dict[str, Any]]:
+        """Get function definitions for OpenAI function calling."""
+        functions = []
+        
+        # Provider Search Tool
+        if 'search_providers_by_zip' in self.tools:
+            functions.append({
+                "type": "function",
+                "function": {
+                    "name": "search_providers_by_zip",
+                    "description": "Search for healthcare providers by ZIP code. Use this when the user asks about finding doctors, providers, or healthcare services. The ZIP code will be automatically extracted from the patient's health records if available, or you can use a ZIP code provided by the user.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "zip_code": {
+                                "type": "string",
+                                "description": "ZIP code to search for. If not provided, the tool will try to extract it from the patient's health records. If the user provides a ZIP code, use that value. Example: '02142' or '90210'"
+                            },
+                            "maxresults": {
+                                "type": "integer",
+                                "description": "Maximum number of results to return. Default is 10.",
+                                "default": 10,
+                                "minimum": 1,
+                                "maximum": 50
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            })
+        
+        return functions
     
     def _build_messages(
         self, 
@@ -90,7 +142,7 @@ class LLMOrchestrator:
         fhir_data: Optional[Any] = None
     ) -> str:
         """
-        Generate a response using LLM.
+        Generate a response using LLM with function calling support.
         
         Args:
             user_message: Current user message
@@ -110,19 +162,83 @@ class LLMOrchestrator:
         # Build messages for API
         messages = self._build_messages(history, fhir_data)
         
+        # Get function definitions
+        functions = self._get_function_definitions()
+        
         try:
-            # Call OpenAI API
-            # Note: Not setting max_completion_tokens - let the model generate as much as needed
-            # The model will naturally stop when the response is complete
-            # This is especially important for comprehensive health summaries
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=messages,
-                temperature=0.7,
-                timeout=60  # 60 second timeout
-            )
+            # Maximum iterations for function calling loop
+            max_iterations = 5
+            iteration = 0
             
-            return response.choices[0].message.content
+            while iteration < max_iterations:
+                # Prepare API call parameters
+                api_params = {
+                    "model": self.model,
+                    "messages": messages,
+                    "temperature": 0.7,
+                    "timeout": 60
+                }
+                
+                # Add functions if available
+                if functions:
+                    api_params["tools"] = functions
+                    api_params["tool_choice"] = "auto"  # Let the model decide when to use tools
+                
+                # Call OpenAI API
+                response = self.client.chat.completions.create(**api_params)
+                
+                message = response.choices[0].message
+                
+                # Add assistant's message to conversation
+                assistant_message = {
+                    "role": "assistant",
+                    "content": message.content
+                }
+                
+                # Add tool calls if present
+                if message.tool_calls:
+                    assistant_message["tool_calls"] = [
+                        {
+                            "id": tc.id,
+                            "type": tc.type,
+                            "function": {
+                                "name": tc.function.name,
+                                "arguments": tc.function.arguments
+                            }
+                        } for tc in message.tool_calls
+                    ]
+                
+                messages.append(assistant_message)
+                
+                # Check if the model wants to call a function
+                if message.tool_calls:
+                    # Execute function calls
+                    for tool_call in message.tool_calls:
+                        function_name = tool_call.function.name
+                        function_args = json.loads(tool_call.function.arguments)
+                        
+                        # Execute the tool (pass FHIR data so tools can extract patient info)
+                        tool_result = self._execute_tool(function_name, function_args, fhir_data=fhir_data)
+                        
+                        # Add function result to messages
+                        messages.append({
+                            "role": "tool",
+                            "tool_call_id": tool_call.id,
+                            "content": json.dumps(tool_result, indent=2)
+                        })
+                    
+                    # Continue the loop to get the final response
+                    iteration += 1
+                    continue
+                else:
+                    # No function calls - return the final response
+                    return message.content or "I apologize, but I couldn't generate a response."
+            
+            # If we've exceeded max iterations, return the last message
+            if messages and messages[-1].get("role") == "assistant":
+                return messages[-1].get("content", "I apologize, but the conversation exceeded the maximum iterations.")
+            else:
+                return "I apologize, but I encountered an issue processing your request."
         
         except Exception as e:
             error_msg = str(e)
@@ -139,4 +255,54 @@ class LLMOrchestrator:
                 return "I apologize, but the request timed out. Please try again with a more specific question."
             else:
                 return f"I apologize, but I encountered an error: {error_msg}. Please try again."
+    
+    def _execute_tool(self, function_name: str, function_args: Dict[str, Any], fhir_data: Optional[Any] = None) -> Dict[str, Any]:
+        """
+        Execute a tool function.
+        
+        Args:
+            function_name: Name of the function to execute
+            function_args: Arguments for the function
+            fhir_data: Optional FHIR data to pass to tools
+            
+        Returns:
+            Dictionary with tool execution results
+        """
+        try:
+            if function_name == "search_providers_by_zip":
+                if 'search_providers_by_zip' not in self.tools:
+                    return {
+                        "success": False,
+                        "error": "Provider search tool is not available"
+                    }
+                
+                tool = self.tools['search_providers_by_zip']
+                # Pass FHIR data to tool so it can extract ZIP code
+                result = tool.execute(fhir_data=fhir_data, **function_args)
+                
+                # Format result for LLM consumption
+                if result.get("success"):
+                    providers = result.get("data", [])
+                    return {
+                        "success": True,
+                        "count": result.get("count", 0),
+                        "zip_code": result.get("zip_code"),
+                        "providers": providers,
+                        "summary": f"Found {result.get('count', 0)} provider(s) in ZIP code {result.get('zip_code')}"
+                    }
+                else:
+                    return {
+                        "success": False,
+                        "error": result.get("error", "Unknown error during provider search")
+                    }
+            else:
+                return {
+                    "success": False,
+                    "error": f"Unknown function: {function_name}"
+                }
+        except Exception as e:
+            return {
+                "success": False,
+                "error": f"Error executing tool {function_name}: {str(e)}"
+            }
 
