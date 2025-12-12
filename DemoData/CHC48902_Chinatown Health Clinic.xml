@@ -1,0 +1,693 @@
+<Container>
+	<Patient>
+		<Name>
+			<FamilyName>Chan</FamilyName>
+			<GivenName>Raymond</GivenName>
+		</Name>
+		<MaritalStatus>
+			<Code>S</Code>
+			<Description>Single</Description>
+		</MaritalStatus>
+		<Gender>
+			<Code>M</Code>
+			<Description>Male</Description>
+		</Gender>
+		<BirthTime>1948-05-27T00:00:00Z</BirthTime>
+		<PatientNumbers>
+			<PatientNumber>
+				<Number>CHC48902</Number>
+				<Organization>
+					<Code>Chinatown Health Clinic</Code>
+					<Description>Chinatown Health Clinic</Description>
+				</Organization>
+				<NumberType>MRN</NumberType>
+			</PatientNumber>
+		</PatientNumbers>
+		<Addresses>
+			<Address>
+				<Street>75 Francis St</Street>
+				<City>
+					<Code>Boston</Code>
+					<Description>Boston</Description>
+				</City>
+				<State>
+					<Code>MA</Code>
+					<Description>MA</Description>
+				</State>
+				<Zip>
+					<Code>02115</Code>
+					<Description>02115</Description>
+				</Zip>
+			</Address>
+		</Addresses>
+		<EnteredAt>
+			<Code>Chinatown Health Clinic</Code>
+			<Description>Chinatown Health Clinic</Description>
+		</EnteredAt>
+	</Patient>
+	<Encounters>
+		<Encounter>
+			<EncounterNumber>0000000098</EncounterNumber>
+			<AdmissionType>
+				<Code>OP</Code>
+				<Description>Outpatient</Description>
+			</AdmissionType>
+			<EncounterType>O</EncounterType>
+			<AdmittingClinician>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</AdmittingClinician>
+			<AdmissionSource>
+				<Code>03</Code>
+				<Description>Outpatient Clinic</Description>
+			</AdmissionSource>
+			<AssignedWard>Chinatown Health Clinic</AssignedWard>
+			<AdmitReason>
+				<Code>OP</Code>
+				<Description>Outpatient</Description>
+			</AdmitReason>
+			<HealthCareFacility>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+				<Organization>
+					<Code>Chinatown Health Clinic</Code>
+					<Description>Chinatown Health Clinic</Description>
+				</Organization>
+			</HealthCareFacility>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2018-04-06T14:00:00Z</EnteredOn>
+			<FromTime>2018-04-06T14:00:00Z</FromTime>
+			<ToTime>2018-04-06T16:00:00Z</ToTime>
+			<ExternalId>Encounters_88</ExternalId>
+		</Encounter>
+		<Encounter>
+			<EncounterNumber>0000000099</EncounterNumber>
+			<AdmissionType>
+				<Code>OP</Code>
+				<Description>Outpatient</Description>
+			</AdmissionType>
+			<EncounterType>O</EncounterType>
+			<AdmittingClinician>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</AdmittingClinician>
+			<AdmissionSource>
+				<Code>03</Code>
+				<Description>Outpatient Clinic</Description>
+			</AdmissionSource>
+			<AssignedWard>Chinatown Health Clinic</AssignedWard>
+			<AdmitReason>
+				<Code>OP</Code>
+				<Description>Outpatient</Description>
+			</AdmitReason>
+			<HealthCareFacility>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+				<Organization>
+					<Code>Chinatown Health Clinic</Code>
+					<Description>Chinatown Health Clinic</Description>
+				</Organization>
+			</HealthCareFacility>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2022-09-14T10:00:00Z</EnteredOn>
+			<FromTime>2022-09-14T10:00:00Z</FromTime>
+			<ToTime>2022-09-14T10:00:00Z</ToTime>
+			<ExternalId>Encounters_89</ExternalId>
+		</Encounter>
+	</Encounters>
+	<Allergies>
+		<Allergy>
+			<Allergy>
+				<Code>PCN</Code>
+				<Description>Penicillin</Description>
+			</Allergy>
+			<Reaction>
+				<Code>R</Code>
+				<Description>Rash</Description>
+			</Reaction>
+			<Severity>
+				<Code>M</Code>
+				<Description>Moderate</Description>
+			</Severity>
+			<Status>A</Status>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2022-09-14T10:00:00Z</EnteredOn>
+			<FromTime>2022-09-14T10:00:00Z</FromTime>
+			<ExternalId>Allergies_6</ExternalId>
+			<EncounterNumber>0000000099</EncounterNumber>
+		</Allergy>
+		<Allergy>
+			<Allergy>
+				<Code>LAM</Code>
+				<Description>Lamictal</Description>
+			</Allergy>
+			<Reaction>
+				<Code>H</Code>
+				<Description>Hives</Description>
+			</Reaction>
+			<Severity>
+				<Code>MD</Code>
+				<Description>Mild</Description>
+			</Severity>
+			<Status>A</Status>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2022-09-14T10:00:00Z</EnteredOn>
+			<ExternalId>Allergies_7</ExternalId>
+			<EncounterNumber>0000000099</EncounterNumber>
+		</Allergy>
+		<Allergy>
+			<Allergy>
+				<Code>ZYP</Code>
+				<Description>Zyprexa</Description>
+			</Allergy>
+			<Reaction>
+				<Code>GI</Code>
+				<Description>GI Distress</Description>
+			</Reaction>
+			<Severity>
+				<Code>S</Code>
+				<Description>Sensitivity</Description>
+			</Severity>
+			<Status>I</Status>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2019-09-14T10:00:00Z</EnteredOn>
+			<FromTime>2022-09-14T10:00:00Z</FromTime>
+			<ToTime>2022-09-14T00:00:00Z</ToTime>
+			<ExternalId>Allergies_8</ExternalId>
+			<EncounterNumber>0000000099</EncounterNumber>
+		</Allergy>
+	</Allergies>
+	<Diagnoses>
+		<Diagnosis>
+			<EncounterNumber>0000000098</EncounterNumber>
+			<DiagnosingClinician>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</DiagnosingClinician>
+			<Diagnosis>
+				<Code>296.53</Code>
+				<Description>Bipolar Disorder</Description>
+			</Diagnosis>
+			<DiagnosisType>
+				<Code>C</Code>
+				<Description>Chronic</Description>
+			</DiagnosisType>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2018-04-06T14:00:00Z</EnteredOn>
+			<ExternalId>Diagnoses_45</ExternalId>
+		</Diagnosis>
+		<Diagnosis>
+			<EncounterNumber>0000000099</EncounterNumber>
+			<DiagnosingClinician>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</DiagnosingClinician>
+			<Diagnosis>
+				<Code>722.2</Code>
+				<Description>Herniated Disc</Description>
+			</Diagnosis>
+			<DiagnosisType>
+				<Code>C</Code>
+				<Description>Chronic</Description>
+			</DiagnosisType>
+			<OnsetTime>1999-01-27T00:00:00Z</OnsetTime>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2022-09-14T00:00:00Z</EnteredOn>
+			<ExternalId>Diagnoses_46</ExternalId>
+		</Diagnosis>
+	</Diagnoses>
+	<Documents>
+		<Document>
+			<EncounterNumber>0000000098</EncounterNumber>
+			<DocumentTime>2018-04-06T14:00:00Z</DocumentTime>
+			<NoteText>MENTAL STATUS:
+Significant for poorly groomed, cachectic asian male. 
+He is cooperative and alert. 
+His speech is normal, prosody is normal, and rate and rhythm are normal. 
+Motor is normal. He has mild gait abnormalities. No psychomotor retardation or agitation. 
+His mood is "I'm sad, depressed and anxious." His affect is restricted. 
+He is tearful at times when discussing past traumas, and he became anxious and panicky at certain points during the interviews. 
+Perception is normal. He denies auditory and visual hallucinations. 
+He denies depersonalization and derealization, except that those occurred when the past transgressions occurred. 
+Otherwise, he has not had dissociative phenomena. Thought processes are normal. 
+He has no loosening of association, no flight of ideas, no tangentiality, and no circumstantiality. 
+He is goal directed and oriented. Insight and judgment are good. He is alert and oriented to person, place, and time. 
+He is able to register three words and recall them at five minutes. 
+He is able to do simple calculations, stating 2x3 is 6, and 1 dollar 15 cents has 23 nickels. 
+She is given a proverb to interpret. He was asked what judging a book by its cover meant. 
+He said, "You can't always tell what a person is by looking at them on the outside." 
+He is appropriate in his abstraction, and is able to identify the last four presidents.
+
+SOCIAL DETERMINANTS:
+Patient lives in Chinatown low income housing. 
+Patient admits housing conditions are "over crowded"
+He has poor access to healthcare and medical compliance
+
+DIAGNOSES:
+AXIS I. 309.81 Posttraumatic Stress Disorder. 
+296.53 Bipolar Disorder, most recent episode depressed. 
+Rule out 300.81 somatization disorder.
+AXIS II. Rule out 301.83 Borderline Personality Disorder.
+
+TREATMENT PLAN: 
+We discussed the diagnoses, somatization disorder, Bipolar Disorder, Borderline Personality Disorder, and Posttraumatic Stress Disorder. 
+We also discussed the treatment; we discussed EMDR, as well as psychotherapy. 
+Apparently, he has not had a full course of psychotherapy so he will be referred to Lucy at Counseling Center. 
+We are going to take labs. He is on Trileptal and he will take an electrolyte profile for that. 
+We are going to wean his Wellbutrin since it is not the best medication for Posttraumatic Stress Disorder, and will replace it with an SSRI. 
+The one chosen was Lexapro. He was given Lunesta 3 mg p.o. q.h.s. to sleep. We are starting Lexapro 10 mg p.o. q.a.m. 
+He is also given Ativan 1 mg p.o. t.i.d. p.r.n. 
+Seroquel was decreased to 200 mg p.o. q.h.s., and Trileptal will be started at 300 mg and eventually raised to 600 mg p.o. b.i.d. 
+Old records will be reviewed from when they become available, and he will return for followup in approximately four weeks,
+which will be the middle of May.
+			</NoteText>
+			<DocumentType>
+				<Code>CONS</Code>
+				<Description>Consult</Description>
+			</DocumentType>
+			<Clinician>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</Clinician>
+			<DocumentName>Mental Health Clinic Evaluation</DocumentName>
+			<FileType>Mental Health Evaluation</FileType>
+			<DocumentNumber>2345690</DocumentNumber>
+			<Status>
+				<Code>F</Code>
+				<Description>Final</Description>
+			</Status>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2018-04-06T14:00:00Z</EnteredOn>
+			<ExternalId>Documents_56</ExternalId>
+		</Document>
+		<Document>
+			<EncounterNumber>0000000099</EncounterNumber>
+			<DocumentTime>2022-09-14T10:00:00Z</DocumentTime>
+			<NoteText>HISTORY OF PRESENT ILLNESS: The patient was treated most recently as an inpatient on a psych hold. 
+After leaving the hospital he stopped taking his Abilify and lithium. 
+He arrives here and is today pacing in the waiting room and in and out of the exam room area. 
+He is friendly towards the other patients although sometimes raises his voice and comes too close to other patients in a rapid manner. 
+He is highly tangential, delusional, and disorganized. 
+
+MEDICAL HISTORY: The patient has a history of a herniated disc in 1999.
+
+ALLERGIES: Said to be PENICILLIN, LAMICTAL, and ZYPREXA.
+
+DIAGNOSES:
+AXIS I:
+1. Bipolar affective disorder, manic state.
+2. Rule out depression.
+AXIS II: Deferred.
+AXIS III: History of herniated disc.
+AXIS IV: Severe.
+AXIS V: 10.
+
+RECOMMENDATIONS: Establish patient safety at home. 
+Decrease his mania and psychosis and paranoid ideation. 
+Resume medications. 
+Encourage the patient to engage in the treatment milieu and support his positive coping skills as they arise, providing psychoeducation.
+			</NoteText>
+			<DocumentType>
+				<Code>FUV</Code>
+				<Description>Follow Up Visit</Description>
+			</DocumentType>
+			<Clinician>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</Clinician>
+			<DocumentName>Mental Health Follow Up</DocumentName>
+			<FileType>Mental Health Follow Up</FileType>
+			<DocumentNumber>6789478</DocumentNumber>
+			<Status>
+				<Code>F</Code>
+				<Description>Final</Description>
+			</Status>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2022-09-14T10:00:00Z</EnteredOn>
+			<ExternalId>Documents_57</ExternalId>
+		</Document>
+	</Documents>
+	<Medications>
+		<Medication>
+			<PlacerId>00208</PlacerId>
+			<FillerId>00210</FillerId>
+			<OrderedBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</OrderedBy>
+			<VerifiedBy>
+				<Code>RX</Code>
+				<Description>Pharmacist</Description>
+			</VerifiedBy>
+			<Frequency>
+				<Code>BID</Code>
+				<Description>Twice a day</Description>
+			</Frequency>
+			<Duration>
+				<Code>D</Code>
+				<Description>30 Days</Description>
+			</Duration>
+			<Status>C</Status>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2018-04-06T14:00:00Z</EnteredOn>
+			<FromTime>2018-04-06T14:00:00Z</FromTime>
+			<DrugProduct>
+				<Code>73456</Code>
+				<Description>Trileptal 300mg</Description>
+			</DrugProduct>
+			<StrengthVolume>300</StrengthVolume>
+			<StrengthVolumeUnits>mg</StrengthVolumeUnits>
+			<DoseQuantity>300</DoseQuantity>
+			<DoseUoM>
+				<Code>MG</Code>
+				<Description>MG</Description>
+			</DoseUoM>
+			<NumberOfRefills>8</NumberOfRefills>
+			<DosageForm>
+				<Code>C42998</Code>
+				<Description>Talbet</Description>
+			</DosageForm>
+			<Route>
+				<Code>C38288</Code>
+				<Description>Oral</Description>
+			</Route>
+			<ExternalId>Medications_65</ExternalId>
+			<EncounterNumber>0000000098</EncounterNumber>
+		</Medication>
+		<Medication>
+			<PlacerId>00209</PlacerId>
+			<FillerId>00211</FillerId>
+			<OrderedBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</OrderedBy>
+			<VerifiedBy>
+				<Code>RX</Code>
+				<Description>Pharmacist</Description>
+			</VerifiedBy>
+			<Frequency>
+				<Code>TID</Code>
+				<Description>Three times a day</Description>
+			</Frequency>
+			<Duration>
+				<Code>D</Code>
+				<Description>30 Days</Description>
+			</Duration>
+			<Status>V</Status>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<TextInstruction>Take po t.i.d prn</TextInstruction>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2018-04-06T14:00:00Z</EnteredOn>
+			<FromTime>2018-04-06T14:00:00Z</FromTime>
+			<DrugProduct>
+				<Code>34987</Code>
+				<Description>Ativan 1mg</Description>
+			</DrugProduct>
+			<StrengthVolume>1</StrengthVolume>
+			<StrengthVolumeUnits>mg</StrengthVolumeUnits>
+			<DoseQuantity>1</DoseQuantity>
+			<DoseUoM>
+				<Code>MG</Code>
+				<Description>MG</Description>
+			</DoseUoM>
+			<NumberOfRefills>8</NumberOfRefills>
+			<DosageForm>
+				<Code>C42998</Code>
+				<Description>Talbet</Description>
+			</DosageForm>
+			<Route>
+				<Code>C38288</Code>
+				<Description>Oral</Description>
+			</Route>
+			<Indication>Take for anxiety</Indication>
+			<ExternalId>Medications_66</ExternalId>
+			<EncounterNumber>0000000098</EncounterNumber>
+		</Medication>
+		<Medication>
+			<PlacerId>00210</PlacerId>
+			<FillerId>00212</FillerId>
+			<OrderedBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</OrderedBy>
+			<VerifiedBy>
+				<Code>RX</Code>
+				<Description>Pharmacist</Description>
+			</VerifiedBy>
+			<Frequency>
+				<Code>HS</Code>
+				<Description>At Bedtime</Description>
+			</Frequency>
+			<Duration>
+				<Code>D</Code>
+				<Description>30 Days</Description>
+			</Duration>
+			<Status>V</Status>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<TextInstruction>Take at bedtime for sleep</TextInstruction>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2018-04-06T14:00:00Z</EnteredOn>
+			<FromTime>2018-04-06T14:00:00Z</FromTime>
+			<DrugProduct>
+				<Code>34782</Code>
+				<Description>Lunesta 3mg</Description>
+			</DrugProduct>
+			<StrengthVolume>3</StrengthVolume>
+			<StrengthVolumeUnits>mg</StrengthVolumeUnits>
+			<DoseQuantity>3</DoseQuantity>
+			<DoseUoM>
+				<Code>MG</Code>
+				<Description>MG</Description>
+			</DoseUoM>
+			<NumberOfRefills>8</NumberOfRefills>
+			<DosageForm>
+				<Code>C42998</Code>
+				<Description>Talbet</Description>
+			</DosageForm>
+			<Route>
+				<Code>C38288</Code>
+				<Description>Oral</Description>
+			</Route>
+			<Indication>For Sleep</Indication>
+			<ExternalId>Medications_67</ExternalId>
+			<EncounterNumber>0000000098</EncounterNumber>
+		</Medication>
+		<Medication>
+			<PlacerId>00211</PlacerId>
+			<FillerId>00213</FillerId>
+			<OrderedBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</OrderedBy>
+			<VerifiedBy>
+				<Code>RX</Code>
+				<Description>Pharmacist</Description>
+			</VerifiedBy>
+			<Frequency>
+				<Code>D</Code>
+				<Description>Daily</Description>
+			</Frequency>
+			<Duration>
+				<Code>D</Code>
+				<Description>30 Days</Description>
+			</Duration>
+			<Status>V</Status>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<TextInstruction>Take daily (in the AM)</TextInstruction>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2018-04-06T13:00:00Z</EnteredOn>
+			<FromTime>2011-04-06T14:00:00Z</FromTime>
+			<DrugProduct>
+				<Code>08245</Code>
+				<Description>Lexapro 10mg</Description>
+			</DrugProduct>
+			<StrengthVolume>10</StrengthVolume>
+			<StrengthVolumeUnits>mg</StrengthVolumeUnits>
+			<DoseQuantity>10</DoseQuantity>
+			<DoseUoM>
+				<Code>MG</Code>
+				<Description>MG</Description>
+			</DoseUoM>
+			<NumberOfRefills>8</NumberOfRefills>
+			<DosageForm>
+				<Code>C42998</Code>
+				<Description>Talbet</Description>
+			</DosageForm>
+			<Route>
+				<Code>C38288</Code>
+				<Description>Oral</Description>
+			</Route>
+			<ExternalId>Medications_68</ExternalId>
+			<EncounterNumber>0000000098</EncounterNumber>
+		</Medication>
+		<Medication>
+			<PlacerId>00212</PlacerId>
+			<FillerId>00214</FillerId>
+			<OrderedBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</OrderedBy>
+			<VerifiedBy>
+				<Code>RX</Code>
+				<Description>Pharmacist</Description>
+			</VerifiedBy>
+			<Frequency>
+				<Code>HS</Code>
+				<Description>At Bedtime</Description>
+			</Frequency>
+			<Duration>
+				<Code>D</Code>
+				<Description>30 Days</Description>
+			</Duration>
+			<Status>V</Status>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<TextInstruction>Take 200mg daily at bedtime</TextInstruction>
+			<EnteredBy>
+				<Code>MB</Code>
+				<Description>Dr. Michael Bloom</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Chinatown Health Clinic</Code>
+				<Description>Chinatown Health Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2018-04-06T14:00:00Z</EnteredOn>
+			<FromTime>2018-04-06T14:00:00Z</FromTime>
+			<DrugProduct>
+				<Code>29877</Code>
+				<Description>Seroquel 200mg</Description>
+			</DrugProduct>
+			<StrengthVolume>200</StrengthVolume>
+			<StrengthVolumeUnits>mg</StrengthVolumeUnits>
+			<DoseQuantity>200</DoseQuantity>
+			<DoseUoM>
+				<Code>MG</Code>
+				<Description>MG</Description>
+			</DoseUoM>
+			<NumberOfRefills>8</NumberOfRefills>
+			<DosageForm>
+				<Code>C42998</Code>
+				<Description>Talbet</Description>
+			</DosageForm>
+			<Route>
+				<Code>C38288</Code>
+				<Description>Oral</Description>
+			</Route>
+			<ExternalId>Medications_69</ExternalId>
+			<EncounterNumber>0000000098</EncounterNumber>
+		</Medication>
+	</Medications>
+	<Action>AddOrUpdate</Action>
+	<UpdateECRDemographics>true</UpdateECRDemographics>
+	<SendingFacility>Chinatown Health Clinic</SendingFacility>
+</Container>

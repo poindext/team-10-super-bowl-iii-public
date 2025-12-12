@@ -1,0 +1,547 @@
+<Container>
+	<Patient>
+		<Name>
+			<FamilyName>Chan</FamilyName>
+			<GivenName>Raymond</GivenName>
+		</Name>
+		<MaritalStatus>
+			<Code>S</Code>
+			<Description>Single</Description>
+		</MaritalStatus>
+		<Gender>
+			<Code>M</Code>
+			<Description>Male</Description>
+		</Gender>
+		<BirthTime>1948-05-27T00:00:00Z</BirthTime>
+		<PatientNumbers>
+			<PatientNumber>
+				<Number>BYH672543</Number>
+				<Organization>
+					<Code>Bayonne Hospital</Code>
+					<Description>Bayonne Hospital</Description>
+				</Organization>
+				<NumberType>MRN</NumberType>
+			</PatientNumber>
+		</PatientNumbers>
+		<Addresses>
+			<Address>
+				<Street>75 Francis St</Street>
+				<City>
+					<Code>Boston</Code>
+					<Description>Boston</Description>
+				</City>
+				<State>
+					<Code>MA</Code>
+					<Description>MA</Description>
+				</State>
+				<Zip>
+					<Code>02115</Code>
+					<Description>02115</Description>
+				</Zip>
+			</Address>
+		</Addresses>
+		<EnteredAt>
+			<Code>Bayonne Hospital</Code>
+			<Description>Bayonne Hospital</Description>
+		</EnteredAt>
+	</Patient>
+	<Encounters>
+		<Encounter>
+			<EncounterNumber>0000000103</EncounterNumber>
+			<AdmissionType>
+				<Code>IP</Code>
+				<Description>Inpatient</Description>
+			</AdmissionType>
+			<EncounterType>I</EncounterType>
+			<AdmittingClinician>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</AdmittingClinician>
+			<AdmissionSource>
+				<Code>04</Code>
+				<Description>Inpatient</Description>
+			</AdmissionSource>
+			<AssignedWard>Inpatient Psychiatric Unit</AssignedWard>
+			<AdmitReason>
+				<Code>IP</Code>
+				<Description>Inpatient</Description>
+			</AdmitReason>
+			<HealthCareFacility>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+				<Organization>
+					<Code>Bayonne Hospital</Code>
+					<Description>Bayonne Hospital</Description>
+				</Organization>
+			</HealthCareFacility>
+			<DischargeLocation>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+			</DischargeLocation>
+			<VisitDescription>90 Day Psychiatric Hold</VisitDescription>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2015-03-02T07:00:00Z</EnteredOn>
+			<FromTime>2015-03-02T07:00:00Z</FromTime>
+			<ToTime>2015-06-04T12:00:00Z</ToTime>
+			<ExternalId>Encounters_92</ExternalId>
+		</Encounter>
+		<Encounter>
+			<EncounterNumber>0000000104</EncounterNumber>
+			<AdmissionType>
+				<Code>IP</Code>
+				<Description>Inpatient</Description>
+			</AdmissionType>
+			<EncounterType>I</EncounterType>
+			<AdmittingClinician>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</AdmittingClinician>
+			<AdmissionSource>
+				<Code>04</Code>
+				<Description>Inpatient</Description>
+			</AdmissionSource>
+			<AssignedWard>Inpatient Psychiatric Unit</AssignedWard>
+			<AdmitReason>
+				<Code>IP</Code>
+				<Description>Inpatient</Description>
+			</AdmitReason>
+			<HealthCareFacility>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+				<Organization>
+					<Code>Bayonne Hospital</Code>
+					<Description>Bayonne Hospital</Description>
+				</Organization>
+			</HealthCareFacility>
+			<DischargeLocation>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+			</DischargeLocation>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2015-10-05T18:00:00Z</EnteredOn>
+			<FromTime>2015-10-05T18:00:00Z</FromTime>
+			<ToTime>2015-10-17T08:00:00Z</ToTime>
+			<ExternalId>Encounters_93</ExternalId>
+		</Encounter>
+	</Encounters>
+	<Diagnoses>
+		<Diagnosis>
+			<EncounterNumber>0000000104</EncounterNumber>
+			<DiagnosingClinician>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</DiagnosingClinician>
+			<Diagnosis>
+				<Code>780.1</Code>
+				<Description>Auditory Hallucination</Description>
+			</Diagnosis>
+			<DiagnosisType>
+				<Code>A</Code>
+				<Description>Acute</Description>
+			</DiagnosisType>
+			<EnteredBy>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2015-03-02T07:00:00Z</EnteredOn>
+			<ExternalId>Diagnoses_52</ExternalId>
+		</Diagnosis>
+	</Diagnoses>
+	<Problems>
+		<Problem>
+			<EncounterNumber>0000000104</EncounterNumber>
+			<Problem>
+				<Code>780.1</Code>
+				<Description>Auditory Hallucinations</Description>
+			</Problem>
+			<Clinician>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2015-10-05T12:00:00Z</EnteredOn>
+			<FromTime>2015-10-05T07:00:00Z</FromTime>
+			<ToTime>2015-10-05T12:00:00Z</ToTime>
+			<ExternalId>Problems_22</ExternalId>
+		</Problem>
+	</Problems>
+	<Documents>
+		<Document>
+			<EncounterNumber>0000000103</EncounterNumber>
+			<NoteText>CHIEF COMPLIANT: "I'm here because I'm different." The patient exhibits poor insight into illness and need for treatment.
+HISTORY OF PRESENT ILLNESS: The patient has a history of bipolar affective disorder and poor outpatient compliance. According to mental health professionals, he had not been compliant with medications or outpatient followup, and over the past several weeks, the patient had become increasingly labile. The patient had expressed grandiose delusions that he is Martin Luther King, and was found recently at a local church agitated throwing a pew and a lectern and required Tasering by police. On admission interview, the patient remains euphoric with poor insight.
+PAST PSYCHIATRIC HISTORY: History of bipolar affective disorder. The patient has been treated with Zyprexa and Seroquel, but has had no recent treatment
+FAMILY SOCIAL HISTORY: Unemployed. The patient resides independently. The patient denies recent substance abuse, although tox screen was positive for benzodiazepines.
+MENTAL STATUS EXAMINATION: 
+Attitude: Suspicious, but cooperative.
+Appearance: Shows appropriate hygiene and grooming.
+Psychomotor Behavior: Within normal limits. No agitation or retardation. No EPS or TDS noted.
+Affect: Labile.
+Mood: Euphoric.
+Speech: Pressured.
+Thoughts: Disorganized.
+Thought Content: Remarkable for grandiose delusions as noted. The patient denies auditory hallucinations.
+Psychosis: Grandiose delusions as noted above.
+Suicidal/Homicidal Ideation: The patient denies on admission.
+Cognitive Assessment: Grossly intact. The patient is oriented x 3.
+Judgment: Poor shown by noncompliance to the outpatient treatment.
+Assets: Include stable physical status.
+Limitations: Include recurrent psychosis.
+
+FORMULATION: The patient with a history of bipolar affective disorder, was admitted for increasing mood lability and noncompliance to the outpatient treatment.
+
+INITIAL IMPRESSION:
+AXIS I: BAD, manic with psychosis.
+AXIS II: None.
+AXIS III: None known.
+AXIS IV: Severe.
+AXIS V: 10.
+
+LENGTH OF STAY: 12 days.
+
+PLAN: The patient will be restarted on Zyprexa for mood lability and Seroquel for psychosis and his response will be monitored closely. The patient will be evaluated for more structural outpatient followup following stabilization.
+
+			</NoteText>
+			<DocumentType>
+				<Code>IP</Code>
+				<Description>IP Psych Hold</Description>
+			</DocumentType>
+			<DocumentName>90 Day Psych Hold PDF</DocumentName>
+			<FileType>90 Day Psych Hold PDF</FileType>
+			<EnteredBy>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2015-06-04T12:00:00Z</EnteredOn>
+			<ExternalId>Documents_61</ExternalId>
+		</Document>
+		<Document>
+			<EncounterNumber>0000000104</EncounterNumber>
+			<NoteText>HISTORY AND HOSPITAL COURSE: The patient is an elderly asian male with a history of bipolar affective disorder, was initially admitted for evaluation of increasing mood lability, disorganization, and inappropriate behaviors. The patient reportedly was asking his mother to have sex with him and tried to pull down his mother's pants. The patient took his clothing off, was noted to be very disorganized sexually, and religiously preoccupied, and endorsed auditory hallucinations of voices telling him to calm himself and others. The patient has a history of depression versus bipolar disorder, but without recent treatment. The patient on admission interview was noted to be labile and disorganized. The patient was initiated on Risperdal M-Tab 2 mg p.o. b.i.d. for psychosis and mood lability, and also medically evaluated by Rebecca Richardson, MD. The patient remained labile and suspicious during his hospital stay. The patient continued to be sexually preoccupied and had poor insight into his need for treatment. The patient denied further auditory hallucinations. The patient was treated with Seroquel for persistent mood lability and psychosis. The patient was noted to develop prolactinemia with Risperdal and this was changed to Zyprexa prior to discharge. The patient was discharged to return home to his parents and was referred to Community Mental Health Agencies. The patient was thus discharged in symptomatic condition.
+
+			</NoteText>
+			<DocumentType>
+				<Code>DS</Code>
+				<Description>Discharge Summary</Description>
+			</DocumentType>
+			<DocumentName>12 Day Psych Hold PDF</DocumentName>
+			<FileType>12 Day Psych Hold PDF</FileType>
+			<EnteredBy>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2015-10-17T08:00:00Z</EnteredOn>
+			<ExternalId>Documents_60</ExternalId>
+		</Document>
+	</Documents>
+	<LabOrders>
+		<LabOrder>
+			<PlacerId>00219</PlacerId>
+			<FillerId>00221</FillerId>
+			<OrderItem>
+				<Code>2345</Code>
+				<Description>Benzodiazepine</Description>
+			</OrderItem>
+			<OrderedBy>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</OrderedBy>
+			<EnteringOrganization>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+			</EnteringOrganization>
+			<Specimen>Urine</Specimen>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>ML</Code>
+				<Description>Monique Larson</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2015-10-05T18:00:00Z</EnteredOn>
+			<FromTime>2015-10-05T18:00:00Z</FromTime>
+			<ToTime>2015-10-05T18:00:00Z</ToTime>
+			<Result>
+				<ResultType>IM</ResultType>
+				<ResultItems>
+					<LabResultItem>
+						<EnteredOn>2015-10-05T18:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Benz</Code>
+							<Description>Benzodiazepine</Description>
+						</TestItemCode>
+						<ResultValue>Pos</ResultValue>
+						<ResultNormalRange>Pos/Neg</ResultNormalRange>
+						<ExternalId>LabResultItem_506</ExternalId>
+					</LabResultItem>
+				</ResultItems>
+				<ResultTime>2015-10-05T18:00:00Z</ResultTime>
+				<ExternalId>Result_512</ExternalId>
+			</Result>
+			<ExternalId>LabOrders_117</ExternalId>
+			<EncounterNumber>0000000104</EncounterNumber>
+		</LabOrder>
+	</LabOrders>
+	<Medications>
+		<Medication>
+			<PlacerId>00220</PlacerId>
+			<FillerId>00222</FillerId>
+			<OrderedBy>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</OrderedBy>
+			<VerifiedBy>
+				<Code>RX</Code>
+				<Description>Pharmacist</Description>
+			</VerifiedBy>
+			<Frequency>
+				<Code>BID</Code>
+				<Description>Twice a day</Description>
+			</Frequency>
+			<Duration>
+				<Code>D</Code>
+				<Description>30 Days</Description>
+			</Duration>
+			<Status>V</Status>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<TextInstruction>Take B.I.D for psychosis and mood lability</TextInstruction>
+			<EnteredBy>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2015-10-05T08:00:00Z</EnteredOn>
+			<FromTime>2015-10-05T08:00:00Z</FromTime>
+			<DrugProduct>
+				<Code>982367</Code>
+				<Description>Risperdal M-Tab 2mg</Description>
+			</DrugProduct>
+			<StrengthVolume>2</StrengthVolume>
+			<StrengthVolumeUnits>mg</StrengthVolumeUnits>
+			<DoseQuantity>2</DoseQuantity>
+			<DoseUoM>
+				<Code>MG</Code>
+				<Description>MG</Description>
+			</DoseUoM>
+			<NumberOfRefills>8</NumberOfRefills>
+			<DosageForm>
+				<Code>C42998</Code>
+				<Description>Talbet</Description>
+			</DosageForm>
+			<Route>
+				<Code>C38288</Code>
+				<Description>Oral</Description>
+			</Route>
+			<Indication>For psychosis and mood lability</Indication>
+			<ExternalId>Medications_71</ExternalId>
+			<EncounterNumber>0000000104</EncounterNumber>
+		</Medication>
+	</Medications>
+	<SocialDeterminants>
+		<SocialDeterminant>
+			<Status>Active</Status>
+			<Comments>Unemployed and living on social security/ disability</Comments>
+			<SocialDeterminantCode>
+				<Code>74165-2</Code> 	
+				<Description>History of employment status NIOSH</Description>
+			</SocialDeterminantCode>
+			<SocialDeterminantValueText>No</SocialDeterminantValueText>
+			<EnteredBy>
+				<Code>RR</Code>
+				<Description>Dr. Rebecca Richardson</Description>
+			</EnteredBy>		
+			<EnteredAt>
+				<Code>Bayonne Hospital</Code>
+				<Description>Bayonne Hospital</Description>
+			</EnteredAt>
+			<FromTime>2015-03-02T07:00:00Z</FromTime>
+			<EnteredOn>2015-03-02T07:00:00Z</EnteredOn>
+		</SocialDeterminant>
+		<SocialDeterminant>
+			<Status>Active</Status>
+			<Comments>Please put comments here</Comments>
+			<SocialDeterminantCode>
+				<Code>56091-2</Code>
+				<Description>Race</Description>
+				<SDACodingStandard>LOINC</SDACodingStandard>
+			</SocialDeterminantCode>
+			<SocialDeterminantValueCoded>
+				<Code>LA4457-3</Code>
+				<Description>White</Description>
+				<SDACodingStandard>LOINC</SDACodingStandard>
+			</SocialDeterminantValueCoded>
+			<EnteredBy>
+				<Code>Zabala, Nerio C.</Code>
+				<Description>Zabala, Nerio C.</Description>
+			</EnteredBy>
+			<EnteredOn>2022-11-09T00:00:00Z</EnteredOn>
+			<FromTime>2022-10-19T00:00:00Z</FromTime>
+		</SocialDeterminant>
+		<SocialDeterminant>
+			<Status>Active</Status>
+			<Comments>Please put comments here</Comments>
+			<SocialDeterminantCode>
+				<Description>Farm Worker Status</Description>
+			</SocialDeterminantCode>
+			<SocialDeterminantValueText>No</SocialDeterminantValueText>
+			<EnteredBy>
+				<Code>Zabala, Nerio C.</Code>
+				<Description>Zabala, Nerio C.</Description>
+			</EnteredBy>
+			<EnteredOn>2022-11-09T00:00:00Z</EnteredOn>
+			<FromTime>2022-10-19T00:00:00Z</FromTime>
+		</SocialDeterminant>
+		<SocialDeterminant>
+			<Status>Active</Status>
+			<Comments>Please put comments here</Comments>
+			<SocialDeterminantCode>
+				<Code>63512-8</Code>
+				<Description>How many people are living or staying at this address</Description>
+				<SDACodingStandard>LOINC</SDACodingStandard>
+			</SocialDeterminantCode>
+			<SocialDeterminantValueNumeric>4</SocialDeterminantValueNumeric>
+			<EnteredBy>
+				<Code>Zabala, Nerio C.</Code>
+				<Description>Zabala, Nerio C.</Description>
+			</EnteredBy>
+			<EnteredOn>2022-11-09T00:00:00Z</EnteredOn>
+			<FromTime>2022-10-19T00:00:00Z</FromTime>
+		</SocialDeterminant>
+		<SocialDeterminant>
+			<Status>Active</Status>
+			<Comments>Please put comments here</Comments>
+			<SocialDeterminantCode>
+				<Code>71802-3</Code>
+				<Description>Housing status</Description>
+				<SDACodingStandard>LOINC</SDACodingStandard>
+			</SocialDeterminantCode>
+			<SocialDeterminantValueCoded>
+				<Code>LA18839-3</Code>
+				<Description>Patient lives in own home</Description>
+				<SDACodingStandard>LOINC</SDACodingStandard>
+			</SocialDeterminantValueCoded>
+			<EnteredBy>
+				<Code>Zabala, Nerio C.</Code>
+				<Description>Zabala, Nerio C.</Description>
+			</EnteredBy>
+			<EnteredOn>2022-11-09T00:00:00Z</EnteredOn>
+			<FromTime>2022-10-19T00:00:00Z</FromTime>
+		</SocialDeterminant>
+		<SocialDeterminant>
+			<Status>Active</Status>
+			<Comments>Please put comments here</Comments>
+			<SocialDeterminantCode>
+				<Code>63504-5</Code>
+				<Description>Current educational attainment</Description>
+				<SDACodingStandard>LOINC</SDACodingStandard>
+			</SocialDeterminantCode>
+			<SocialDeterminantValueCoded>
+				<Code>LA12460-4</Code>
+				<Description>Bachelor?s degree (e.g., BA, AB, BS)</Description>
+				<SDACodingStandard>LOINC</SDACodingStandard>
+			</SocialDeterminantValueCoded>
+			<EnteredBy>
+				<Code>Zabala, Nerio C.</Code>
+				<Description>Zabala, Nerio C.</Description>
+			</EnteredBy>
+			<EnteredOn>2022-11-09T00:00:00Z</EnteredOn>
+			<FromTime>2022-10-19T00:00:00Z</FromTime>
+		</SocialDeterminant>
+		<SocialDeterminant>
+			<Status>Active</Status>
+			<Comments>Please put comments here</Comments>
+			<SocialDeterminantCode>
+				<Code>8663-7</Code>
+				<Description>Cigarettes smoked current (pack per day) - Reported</Description>
+				<SDACodingStandard>LOINC</SDACodingStandard>
+			</SocialDeterminantCode>
+			<SocialDeterminantValueNumeric>1</SocialDeterminantValueNumeric>
+			<SocialDeterminantUnitOfMeasure>
+				<Code>{Pack}/d</Code>
+				<Description>Pack of Cigarettes smoked current per day</Description>
+				<SDACodingStandard>UCUM</SDACodingStandard>
+			</SocialDeterminantUnitOfMeasure>
+			<EnteredBy>
+				<Code>Zabala, Nerio C.</Code>
+				<Description>Zabala, Nerio C.</Description>
+			</EnteredBy>
+			<EnteredOn>2022-11-09T00:00:00Z</EnteredOn>
+			<FromTime>2022-10-19T00:00:00Z</FromTime>
+		</SocialDeterminant>
+		<SocialDeterminant>
+			<Status>Active</Status>
+			<Comments>Please put comments here</Comments>
+			<SocialDeterminantCode>
+				<Code>54133-4</Code>
+				<Description>Ethnicity</Description>
+				<SDACodingStandard>LOINC</SDACodingStandard>
+			</SocialDeterminantCode>
+			<SocialDeterminantValueCoded>
+				<Code>LA10597-5</Code>
+				<Description>Non-Hispanic or Latino</Description>
+				<SDACodingStandard>LOINC</SDACodingStandard>
+			</SocialDeterminantValueCoded>
+			<EnteredBy>
+				<Code>Zabala, Nerio C.</Code>
+				<Description>Zabala, Nerio C.</Description>
+			</EnteredBy>
+			<EnteredOn>2022-11-09T00:00:00Z</EnteredOn>
+			<FromTime>2022-10-19T00:00:00Z</FromTime>
+		</SocialDeterminant>
+	</SocialDeterminants>
+	<Action>AddOrUpdate</Action>
+	<UpdateECRDemographics>true</UpdateECRDemographics>
+	<SendingFacility>Bayonne Hospital</SendingFacility>
+</Container>

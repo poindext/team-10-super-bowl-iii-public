@@ -1,0 +1,384 @@
+<Container>
+	<Patient>
+
+		<Name>
+			<FamilyName>Chan</FamilyName>
+			<GivenName>Raymond</GivenName>
+		</Name>
+		<MaritalStatus>
+			<Code>S</Code>
+			<Description>Single</Description>
+		</MaritalStatus>
+		<Gender>
+			<Code>M</Code>
+			<Description>Male</Description>
+		</Gender>
+		<BirthTime>1948-05-27T00:00:00Z</BirthTime>
+		<PatientNumbers>
+			<PatientNumber>
+				<Number>LMDC2309467</Number>
+				<Organization>
+					<Code>Long Medical Diabetes Clinic</Code>
+					<Description>Long Medical Diabetes Clinic</Description>
+				</Organization>
+				<NumberType>MRN</NumberType>
+			</PatientNumber>
+		</PatientNumbers>
+		<Addresses>
+			<Address>
+				<Street>75 Francis St</Street>
+				<City>
+					<Code>Boston</Code>
+					<Description>Boston</Description>
+				</City>
+				<State>
+					<Code>MA</Code>
+					<Description>MA</Description>
+				</State>
+				<Zip>
+					<Code>02115</Code>
+					<Description>02115</Description>
+				</Zip>
+			</Address>
+		</Addresses>
+		<EnteredAt>
+			<Code>Long Medical Diabetes Clinic</Code>
+			<Description>Long Medical Diabetes Clinic</Description>
+		</EnteredAt>
+	</Patient>
+	<Encounters>
+		<Encounter>
+			<EncounterNumber>0000000004</EncounterNumber>
+			<AdmissionType>
+				<Code>OP</Code>
+				<Description>Outpatient</Description>
+			</AdmissionType>
+			<EncounterType>O</EncounterType>
+			<AdmittingClinician>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</AdmittingClinician>
+			<ReferringClinician>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</ReferringClinician>
+			<AdmissionSource>
+				<Code>03</Code>
+				<Description>Outpatient Clinic</Description>
+			</AdmissionSource>
+			<AssignedWard>Long Medical Diabetes Clinic</AssignedWard>
+			<AdmitReason>
+				<Code>OP</Code>
+				<Description>Outpatient</Description>
+			</AdmitReason>
+			<HealthCareFacility>
+				<Code>Community Health Care NYC</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+				<Organization>
+					<Code>Long Medical Diabetes Clinic</Code>
+					<Description>Long Medical Diabetes Clinic</Description>
+				</Organization>
+			</HealthCareFacility>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+			<FromTime>2023-11-02T12:00:00Z</FromTime>
+			<ToTime>2023-11-02T13:30:00Z</ToTime>
+			<ExternalId>Encounters_4</ExternalId>
+		</Encounter>
+	</Encounters>
+	<Alerts>
+		<Alert>
+			<EncounterNumber>0000000004</EncounterNumber>
+			<AlertType>
+				<Code>FS</Code>
+				<Description>Functional Status</Description>
+			</AlertType>
+			<Alert>
+				<Code>ADL</Code>
+				<Description>Activities of Daily Living</Description>
+			</Alert>
+			<Comments>Independent dressing</Comments>
+			<Status>A</Status>
+			<EnteredBy>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-02T12:00:00Z</EnteredOn>
+			<ExternalId>Alerts_1</ExternalId>
+		</Alert>
+		<Alert>
+			<EncounterNumber>0000000004</EncounterNumber>
+			<AlertType>
+				<Code>FS</Code>
+				<Description>Functional Status</Description>
+			</AlertType>
+			<Alert>
+				<Code>ADL</Code>
+				<Description>Activities of Daily Living</Description>
+			</Alert>
+			<Comments>1 person assist with bathing</Comments>
+			<Status>A</Status>
+			<EnteredBy>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-02T12:00:00Z</EnteredOn>
+			<ExternalId>Alerts_2</ExternalId>
+		</Alert>
+		<Alert>
+			<EncounterNumber>0000000004</EncounterNumber>
+			<AlertType>
+				<Code>FS</Code>
+				<Description>Functional Status</Description>
+			</AlertType>
+			<Alert>
+				<Code>ADL</Code>
+				<Description>Activities of Daily Living</Description>
+			</Alert>
+			<Comments>Needs assist to prepare meals</Comments>
+			<Status>A</Status>
+			<EnteredBy>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-02T12:00:00Z</EnteredOn>
+			<ExternalId>Alerts_3</ExternalId>
+		</Alert>
+	</Alerts>
+	<Observations>
+		<Observation>
+			<ExternalId>Observations_17</ExternalId>
+			<EncounterNumber>0000000004</EncounterNumber>
+			<ObservationTime>2023-11-02T12:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8310-5</Code>
+				<Description>Body Temperature</Description>
+			</ObservationCode>
+			<ObservationValue>100.2</ObservationValue>
+			<Clinician>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</Clinician>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_18</ExternalId>
+			<EncounterNumber>0000000004</EncounterNumber>
+			<ObservationTime>2023-11-02T12:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8462-4</Code>
+				<Description>BP Diastolic</Description>
+			</ObservationCode>
+			<ObservationValue>80</ObservationValue>
+			<Clinician>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</Clinician>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_19</ExternalId>
+			<EncounterNumber>0000000004</EncounterNumber>
+			<ObservationTime>2023-11-02T12:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8480-6</Code>
+				<Description>BP Systolic</Description>
+			</ObservationCode>
+			<ObservationValue>135</ObservationValue>
+			<Clinician>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</Clinician>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_20</ExternalId>
+			<EncounterNumber>0000000004</EncounterNumber>
+			<ObservationTime>2023-11-02T12:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8867-4</Code>
+				<Description>Heart Rate</Description>
+			</ObservationCode>
+			<ObservationValue>83</ObservationValue>
+			<Clinician>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</Clinician>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_21</ExternalId>
+			<EncounterNumber>0000000004</EncounterNumber>
+			<ObservationTime>2023-11-02T12:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>9279-1</Code>
+				<Description>Respiratory Rate</Description>
+			</ObservationCode>
+			<ObservationValue>18</ObservationValue>
+			<Clinician>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</Clinician>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_22</ExternalId>
+			<EncounterNumber>0000000004</EncounterNumber>
+			<ObservationTime>2023-11-02T12:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>3141-9</Code>
+				<Description>Weight</Description>
+			</ObservationCode>
+			<ObservationValue>98</ObservationValue>
+			<Clinician>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-02T12:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_23</ExternalId>
+			<EncounterNumber>0000000004</EncounterNumber>
+			<ObservationTime>2023-11-02T12:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8306-3</Code>
+				<Description>Height</Description>
+			</ObservationCode>
+			<ObservationValue>62</ObservationValue>
+			<Clinician>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-02T12:00:00Z</EnteredOn>
+		</Observation>
+	</Observations>
+	<Procedures>
+		<Procedure>
+			<EncounterNumber>0000000004</EncounterNumber>
+			<Procedure>
+				<Code>REE</Code>
+				<Description>Retinal Eye Exam</Description>
+			</Procedure>
+			<Clinician>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</Clinician>
+			<ProcedureTime>2023-11-02T12:00:00Z</ProcedureTime>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+			<ExternalId>Procedures_1</ExternalId>
+		</Procedure>
+	</Procedures>
+	<LabOrders>
+		<LabOrder>
+			<PlacerId>00007</PlacerId>
+			<FillerId>00007</FillerId>
+			<OrderItem>
+				<Code>2335-8</Code>
+				<Description>FOBT</Description>
+			</OrderItem>
+			<OrderedBy>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</OrderedBy>
+			<EnteringOrganization>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteringOrganization>
+			<Specimen>Blood</Specimen>
+			<SpecimenCollectedTime>2023-11-02T12:00:00Z</SpecimenCollectedTime>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>JA</Code>
+				<Description>Jason Ambrose</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Long Medical Diabetes Clinic</Code>
+				<Description>Long Medical Diabetes Clinic</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-02T12:00:00Z</EnteredOn>
+			<FromTime>2023-11-02T12:00:00Z</FromTime>
+			<ToTime>2023-11-02T12:00:00Z</ToTime>
+			<Result>
+				<ResultType>IM</ResultType>
+				<ResultItems>
+					<LabResultItem>
+						<EnteredOn>2023-11-02T12:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>FOBT</Code>
+							<Description>Hemoglobin.gastrointestinal [presence] in stool</Description>
+						</TestItemCode>
+						<ResultValue>Neg</ResultValue>
+						<ResultNormalRange>Pos- Neg</ResultNormalRange>
+						<ExternalId>LabResultItem_23</ExternalId>
+					</LabResultItem>
+				</ResultItems>
+				<ResultTime>2023-11-02T12:00:00Z</ResultTime>
+				<ExternalId>Result_23</ExternalId>
+			</Result>
+			<ExternalId>LabOrders_4</ExternalId>
+			<EncounterNumber>0000000004</EncounterNumber>
+		</LabOrder>
+	</LabOrders>
+	<Action>AddOrUpdate</Action>
+	<UpdateECRDemographics>true</UpdateECRDemographics>
+	<SendingFacility>Long Medical Diabetes Clinic</SendingFacility>
+</Container>

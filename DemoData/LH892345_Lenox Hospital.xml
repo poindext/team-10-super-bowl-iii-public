@@ -1,0 +1,1020 @@
+<Container>
+	<Patient>
+
+		<Name>
+			<FamilyName>Chan</FamilyName>
+			<GivenName>Raymond</GivenName>
+		</Name>
+		<MaritalStatus>
+			<Code>S</Code>
+			<Description>Single</Description>
+		</MaritalStatus>
+		<Gender>
+			<Code>M</Code>
+			<Description>Male</Description>
+		</Gender>
+		<BirthTime>1948-05-27T00:00:00Z</BirthTime>
+		<PatientNumbers>
+			<PatientNumber>
+				<Number>LH892345</Number>
+				<Organization>
+					<Code>Lenox Hospital</Code>
+					<Description>Lenox Hospital</Description>
+				</Organization>
+				<NumberType>MRN</NumberType>
+			</PatientNumber>
+		</PatientNumbers>
+		<Addresses>
+			<Address>
+				<Street>75 Francis St</Street>
+				<City>
+					<Code>Boston</Code>
+					<Description>Boston</Description>
+				</City>
+				<State>
+					<Code>MA</Code>
+					<Description>MA</Description>
+				</State>
+				<Zip>
+					<Code>02115</Code>
+					<Description>02115</Description>
+				</Zip>
+			</Address>
+		</Addresses>
+		<EnteredAt>
+			<Code>Lenox Hospital</Code>
+			<Description>Lenox Hospital</Description>
+		</EnteredAt>
+	</Patient>
+	<Encounters>
+		<Encounter>
+			<EncounterNumber>0000000108</EncounterNumber>
+			<AdmissionType>
+				<Code>ER</Code>
+				<Description>Emergency Room</Description>
+			</AdmissionType>
+			<EncounterType>E</EncounterType>
+			<AdmittingClinician>
+				<Code>ME</Code>
+				<Description>Dr. Martin Evans</Description>
+			</AdmittingClinician>
+			<AdmissionSource>
+				<Code>06</Code>
+				<Description>Emergency Room</Description>
+			</AdmissionSource>
+			<AssignedWard>Emergency Room</AssignedWard>
+			<AdmitReason>
+				<Code>ER</Code>
+				<Description>Emergency Room</Description>
+			</AdmitReason>
+			<HealthCareFacility>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+				<Organization>
+					<Code>Lenox Hospital</Code>
+					<Description>Lenox Hospital</Description>
+				</Organization>
+			</HealthCareFacility>
+			<DischargeLocation>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</DischargeLocation>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>ME</Code>
+				<Description>Dr. Martin Evans</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2023-01-05T08:00:00Z</EnteredOn>
+			<FromTime>2023-01-05T08:00:00Z</FromTime>
+			<ToTime>2023-01-05T22:00:00Z</ToTime>
+			<ExternalId>Encounters_97</ExternalId>
+		</Encounter>
+		<Encounter>
+			<EncounterNumber>0000000109</EncounterNumber>
+			<AdmissionType>
+				<Code>ER</Code>
+				<Description>Emergency Room</Description>
+			</AdmissionType>
+			<EncounterType>E</EncounterType>
+			<AdmittingClinician>
+				<Code>SA</Code>
+				<Description>Dr. Susan Anderson</Description>
+			</AdmittingClinician>
+			<AdmissionSource>
+				<Code>06</Code>
+				<Description>Emergency Room</Description>
+			</AdmissionSource>
+			<AssignedWard>Emergenc Room</AssignedWard>
+			<AdmitReason>
+				<Code>ER</Code>
+				<Description>Emergency Room</Description>
+			</AdmitReason>
+			<HealthCareFacility>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+				<Organization>
+					<Code>Lenox Hospital</Code>
+					<Description>Lenox Hospital</Description>
+				</Organization>
+			</HealthCareFacility>
+			<DischargeLocation>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</DischargeLocation>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>SA</Code>
+				<Description>Dr. Susan Anderson</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2021-12-18T13:00:00Z</EnteredOn>
+			<FromTime>2021-12-18T13:00:00Z</FromTime>
+			<ToTime>2021-12-18T13:00:00Z</ToTime>
+			<ExternalId>Encounters_98</ExternalId>
+		</Encounter>
+		<Encounter>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<AdmissionType>
+				<Code>IP</Code>
+				<Description>Inpatient</Description>
+			</AdmissionType>
+			<EncounterType>I</EncounterType>
+			<AdmittingClinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</AdmittingClinician>
+			<AdmissionSource>
+				<Code>04</Code>
+				<Description>Inpatient</Description>
+			</AdmissionSource>
+			<AssignedWard>Gen Med</AssignedWard>
+			<AdmitReason>
+				<Code>IP</Code>
+				<Description>Inpatient</Description>
+			</AdmitReason>
+			<HealthCareFacility>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+				<Organization>
+					<Code>Lenox Hospital</Code>
+					<Description>Lenox Hospital</Description>
+				</Organization>
+			</HealthCareFacility>
+			<DischargeLocation>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</DischargeLocation>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-23T10:00:00Z</EnteredOn>
+			<FromTime>2024-04-23T10:00:00Z</FromTime>
+			<ToTime>2024-04-25T16:00:00Z</ToTime>
+			<ExternalId>Encounters_3</ExternalId>
+		</Encounter>
+	</Encounters>
+	<Diagnoses>
+		<Diagnosis>
+			<EncounterNumber>0000000109</EncounterNumber>
+			<DiagnosingClinician>
+				<Code>SA</Code>
+				<Description>Dr. Susan Anderson</Description>
+			</DiagnosingClinician>
+			<Diagnosis>
+				<Code>715.6</Code>
+				<Description>Arthralgia (joint pain) of lower leg</Description>
+			</Diagnosis>
+			<DiagnosisType>
+				<Code>A</Code>
+				<Description>Acute</Description>
+			</DiagnosisType>
+			<EnteredBy>
+				<Code>SA</Code>
+				<Description>Dr. Susan Anderson</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2021-12-18T13:00:00Z</EnteredOn>
+			<ExternalId>Diagnoses_53</ExternalId>
+		</Diagnosis>
+		<Diagnosis>
+			<EncounterNumber>0000000108</EncounterNumber>
+			<DiagnosingClinician>
+				<Code>ME</Code>
+				<Description>Dr. Martin Evans</Description>
+			</DiagnosingClinician>
+			<Diagnosis>
+				<Code>A04.7</Code>
+				<Description>Clostridium difficile</Description>
+			</Diagnosis>
+			<DiagnosisType>
+				<Code>A</Code>
+				<Description>Acute</Description>
+			</DiagnosisType>
+			<Status>
+				<Code>A</Code>
+				<Description>Active</Description>
+			</Status>
+			<OnsetTime>2023-01-05T10:00:00Z</OnsetTime>
+			<EnteredBy>
+				<Code>ME</Code>
+				<Description>Dr. Martin Evans</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2023-01-05T10:00:00Z</EnteredOn>
+			<ExternalId>Diagnoses_54</ExternalId>
+		</Diagnosis>
+	</Diagnoses>
+	<Observations>
+		<Observation>
+			<ExternalId>Observations_1</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-23T08:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8310-5</Code>
+				<Description>Body Temperature</Description>
+			</ObservationCode>
+			<ObservationValue>98.6</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-23T08:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_2</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-23T08:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8462-4</Code>
+				<Description>BP Diastolic</Description>
+			</ObservationCode>
+			<ObservationValue>88</ObservationValue>
+			<Clinician>
+				<Code>ME</Code>
+				<Description>Dr. Martin Evans</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-23T08:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_3</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-23T08:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8480-6</Code>
+				<Description>BP Systolic</Description>
+			</ObservationCode>
+			<ObservationValue>120</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-23T08:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_4</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-23T08:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8867-4</Code>
+				<Description>Heart Rate</Description>
+			</ObservationCode>
+			<ObservationValue>104</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-23T08:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_5</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-23T08:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>9279-1</Code>
+				<Description>Respiratory Rate</Description>
+			</ObservationCode>
+			<ObservationValue>18</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-23T08:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_6</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-24T15:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8310-5</Code>
+				<Description>Body Temperature</Description>
+			</ObservationCode>
+			<ObservationValue>98.8</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_7</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-24T15:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8462-4</Code>
+				<Description>BP Diastolic</Description>
+			</ObservationCode>
+			<ObservationValue>78</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_8</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-24T15:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8480-6</Code>
+				<Description>BP Systolic</Description>
+			</ObservationCode>
+			<ObservationValue>118</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_9</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-24T15:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8867-4</Code>
+				<Description>Heart Rate</Description>
+			</ObservationCode>
+			<ObservationValue>95</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_10</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-24T15:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>9279-1</Code>
+				<Description>Respiratory Rate</Description>
+			</ObservationCode>
+			<ObservationValue>18</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_11</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-25T13:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8310-5</Code>
+				<Description>Body Temperature</Description>
+			</ObservationCode>
+			<ObservationValue>98.7</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-25T13:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_12</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-25T13:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8462-4</Code>
+				<Description>BP Diastolic</Description>
+			</ObservationCode>
+			<ObservationValue>75</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-25T13:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_13</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-25T13:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8480-6</Code>
+				<Description>BP Systolic</Description>
+			</ObservationCode>
+			<ObservationValue>112</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-25T13:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_14</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-25T13:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8867-4</Code>
+				<Description>Heart Rate</Description>
+			</ObservationCode>
+			<ObservationValue>78</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-25T13:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_15</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-25T13:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>9279-1</Code>
+				<Description>Respiratory Rate</Description>
+			</ObservationCode>
+			<ObservationValue>16</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-25T13:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_16</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<ObservationTime>2024-04-23T08:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>3141-9</Code>
+				<Description>Weight</Description>
+			</ObservationCode>
+			<ObservationValue>102</ObservationValue>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-23T08:00:00Z</EnteredOn>
+		</Observation>
+	</Observations>
+	<Documents>
+		<Document>
+			<EncounterNumber>0000000108</EncounterNumber>
+			<DocumentTime>2023-01-05T10:00:00Z</DocumentTime>
+			<NoteText>CHIEF COMPLAINT: Patient presents to the ER s/p MVA whle crossing the street (Patient was pedestrian vs motor vehicle).
+
+SUBJECTIVE: Patient is cachectic elderly gentleman.
+Admits to ETOH use prior to accident
+Patient also states he can't remember his last meal
+Patient is a diabetic with minimal to no compliance
+Patient states he goes to the Health Clinic when he feels sick and sees no primary physician for routine care 
+
+PHYSICAL EXAMINATION: 
+WD, WN. Slender,frail asian male. 
+VITAL SIGNS: Blood sugar 145, blood pressure 120/88, heart rate 104, respirations 16. Microalbumin 100. 
+SKIN: There appears to be 2 skin lacerations on the left parietal region of the scalp, each approximately 1 inch long. 
+No signs of infection. Wound is closed with new granulation tissue. Appears to be healing well. 
+HEENT: Normocephalic. PERRLA. EOMI. TMs pearly gray with landmarks present. Nares patent. 
+Throat with no redness or swelling. Nontender sinuses. 
+NECK: Supple. Full ROM. No LAD. 
+CARDIAC: RRR. No murmurs, rubs, or gallops. 
+RESPIRATORY: CTA. ABDOMEN: Soft, nontender. No HSM and no masses. 
+NEURO: Significant for lower extremity numbness throughout. 
+Microfilament test shows more than 3 regions without sensation bilaterally. 
+Bottoms of feet appear calloused and dry. Skin is intact. 
+There is also a small contusion on right shin which appears to be healing, less than 1/2 inch in length and 1 cm in diameter. 
+No signs of infection at this time and appears to be healing.
+ Cranial nerves 2-12 grossly nonfocal. Cerebellar function intact demonstrated through RAM. 
+			</NoteText>
+			<DocumentType>
+				<Code>ER</Code>
+				<Description>ER Assessment</Description>
+			</DocumentType>
+			<Clinician>
+				<Code>ME</Code>
+				<Description>Dr. Martin Evans</Description>
+			</Clinician>
+			<DocumentName>ER Assessment</DocumentName>
+			<FileType>ER Assessment</FileType>
+			<DocumentNumber>39745</DocumentNumber>
+			<Status>
+				<Code>F</Code>
+				<Description>Final</Description>
+			</Status>
+			<EnteredBy>
+				<Code>ME</Code>
+				<Description>Dr. Martin Evans</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2023-01-05T10:00:00Z</EnteredOn>
+			<ExternalId>Documents_62</ExternalId>
+		</Document>
+		<Document>
+			<FromTime>2024-04-23T10:00:00Z</FromTime>
+			<ToTime>2024-04-25T16:00:00Z</ToTime>
+			<EncounterNumber>0000000003</EncounterNumber>
+			<DocumentTime>2024-04-25T16:00:00Z</DocumentTime>
+			<NoteText>Acute Bronchitis Care Plan
+
+Goal: The patient will not show signs and symptoms of difficulty in breathing, and will remain above 92% oxygen saturation
+Intervention: 
+1. Place patient laterally and recumbent to help maintain an open airway
+2. Apply oxygen merely if it helps the patient to decrease labored respirations
+3. Observe the oxygen therapy delivery system, every hour, to gauge if the equipment is set up appropriately on the patient as per doctors orders
+
+Goal: The patient will sustain sufficient respiratory function as evidenced by enhancement of breath sounds, decreased rate of respirations and arterial blood gas volumes in a normal range for patient
+Intervention:
+1. Always stay with patient when having difficulties breathing, to reduce anxiety, and further tachypnea
+2. Demonstrate diaphragmatic and purse lip breathing to patient to assist with slowing the respiratory rate, and reduce air trapping
+3. Sustain the patients fluid intake to a minimum of 2,500MLs po or IV, per day, to help encourage breakdown of secretions and lessen dryness in respiratory mucous membrane
+
+Goal: The patient will decrease pain level from a 7/10 to 2/10 by the end of nurses 12 hours hospital shift using appropriate breathing and medication techniques
+1. Administer acetaminophen pain medication q4-6h to manage and prevent breakthrough
+2. Monitor vital signs qh for respiratory suppression and hypoventilation associated with pain medications
+3. Help patient increase level of comfort in hospital bed by elevating the head of the bed, to help assist in proper, less painful breathing, and provide client with pillow to hug when coughing</NoteText>
+			<DocumentType>
+				<Code>Discharge Care Plan</Code>
+				<Description>Discharge Care Plan</Description>
+			</DocumentType>
+			<Clinician>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</Clinician>
+			<TranscriptionTime>2024-04-25T16:00:00Z</TranscriptionTime>
+			<AuthorizationTime>2024-04-25T16:00:00Z</AuthorizationTime>
+			<DocumentName>Discharge Summary Care Plan</DocumentName>
+			<FileType>Discharge Care Plan</FileType>
+			<DocumentNumber>123456</DocumentNumber>
+			<Status>
+				<Code>F</Code>
+				<Description>Final</Description>
+			</Status>
+			<EnteredBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-25T16:00:00Z</EnteredOn>
+			<ExternalId>Documents_1</ExternalId>
+		</Document>
+	</Documents>
+	<LabOrders>
+		<LabOrder>
+			<PlacerId>00002</PlacerId>
+			<FillerId>00002</FillerId>
+			<OrderItem>
+				<Code>51990-0</Code>
+				<Description>BMP</Description>
+			</OrderItem>
+			<OrderedBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</OrderedBy>
+			<EnteringOrganization>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteringOrganization>
+			<Specimen>Blood</Specimen>
+			<SpecimenCollectedTime>2024-04-24T15:00:00Z</SpecimenCollectedTime>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>LA</Code>
+				<Description>Laurie Anderson</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+			<FromTime>2024-04-24T15:00:00Z</FromTime>
+			<ToTime>2024-04-24T15:00:00Z</ToTime>
+			<Result>
+				<ResultType>IM</ResultType>
+				<ResultItems>
+					<LabResultItem>
+						<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Na</Code>
+							<Description>Sodium</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>146</ResultValue>
+						<ResultValueUnits>MMOL/L</ResultValueUnits>
+						<ResultNormalRange>135-146</ResultNormalRange>
+						<ExternalId>LabResultItem_16</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>K</Code>
+							<Description>Potassium</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>3.6</ResultValue>
+						<ResultValueUnits>MMOL/L</ResultValueUnits>
+						<ResultNormalRange>3.4-5.2</ResultNormalRange>
+						<ExternalId>LabResultItem_17</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Cl</Code>
+							<Description>Chloride</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>154</ResultValue>
+						<ResultValueUnits>MMOL?L</ResultValueUnits>
+						<ResultNormalRange>98-110</ResultNormalRange>
+						<ExternalId>LabResultItem_18</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>CO2</Code>
+							<Description>Total CO2</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>26</ResultValue>
+						<ResultValueUnits>MMOL/L</ResultValueUnits>
+						<ResultNormalRange>24-32</ResultNormalRange>
+						<ExternalId>LabResultItem_19</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-09-24T15:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>BUN</Code>
+							<Description>BUN</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>12</ResultValue>
+						<ResultValueUnits>MG/DL</ResultValueUnits>
+						<ResultNormalRange>7-20</ResultNormalRange>
+						<ExternalId>LabResultItem_20</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Cr</Code>
+							<Description>Creatinine</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>0.6</ResultValue>
+						<ResultValueUnits>MG/DL</ResultValueUnits>
+						<ResultNormalRange>0.6-1.3</ResultNormalRange>
+						<ExternalId>LabResultItem_21</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Glu</Code>
+							<Description>Glucose</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>145</ResultValue>
+						<ResultValueUnits>MG/DL</ResultValueUnits>
+						<ResultNormalRange>70-100</ResultNormalRange>
+						<ExternalId>LabResultItem_22</ExternalId>
+					</LabResultItem>
+				</ResultItems>
+				<ResultTime>2024-04-24T15:00:00Z</ResultTime>
+				<ExternalId>Result_16</ExternalId>
+			</Result>
+			<ExternalId>LabOrders_3</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+		</LabOrder>
+		<LabOrder>
+			<PlacerId>00003</PlacerId>
+			<FillerId>00003</FillerId>
+			<OrderItem>
+				<Code>55454-3</Code>
+				<Description>HgA1C</Description>
+			</OrderItem>
+			<OrderedBy>
+				<Code>DR</Code>
+				<Description>Dr. Doug Ryder</Description>
+			</OrderedBy>
+			<EnteringOrganization>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteringOrganization>
+			<Specimen>Blood</Specimen>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>JM</Code>
+				<Description>John Murphy</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+			<FromTime>2024-04-24T15:00:00Z</FromTime>
+			<ToTime>2024-04-24T15:00:00Z</ToTime>
+			<Result>
+				<ResultType>IM</ResultType>
+				<ResultItems>
+					<LabResultItem>
+						<EnteredOn>2024-04-24T15:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>HgA1C</Code>
+							<Description>HgA1C</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>11.9</ResultValue>
+						<ResultValueUnits>%</ResultValueUnits>
+						<ResultNormalRange>
+							<![CDATA[<7]]>
+						</ResultNormalRange>
+						<ExternalId>LabResultItem_1</ExternalId>
+					</LabResultItem>
+				</ResultItems>
+				<ResultTime>2024-04-24T15:00:00Z</ResultTime>
+				<ExternalId>Result_1</ExternalId>
+			</Result>
+			<ExternalId>LabOrders_1</ExternalId>
+			<EncounterNumber>0000000003</EncounterNumber>
+		</LabOrder>
+	</LabOrders>
+	<Medications>
+		<Medication>
+			<PlacerId>00232</PlacerId>
+			<FillerId>00234</FillerId>
+			<OrderedBy>
+				<Code>ME</Code>
+				<Description>Dr. Martin Evans</Description>
+			</OrderedBy>
+			<VerifiedBy>
+				<Code>RX</Code>
+				<Description>Pharmacist</Description>
+			</VerifiedBy>
+			<Frequency>
+				<Code>BID</Code>
+				<Description>Twice a day</Description>
+			</Frequency>
+			<Duration>
+				<Code>D</Code>
+				<Description>30 Days</Description>
+			</Duration>
+			<Status>IP</Status>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<TextInstruction>Administer 5units subcutaneously BID for blood sugar</TextInstruction>
+			<EnteredBy>
+				<Code>ME</Code>
+				<Description>Dr. Martin Evans</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2023-01-05T15:00:00Z</EnteredOn>
+			<FromTime>2023-01-05T15:00:00Z</FromTime>
+			<DrugProduct>
+				<Code>45902</Code>
+				<Description>Regular Insulin 5units</Description>
+			</DrugProduct>
+			<StrengthVolume>5</StrengthVolume>
+			<StrengthVolumeUnits>units</StrengthVolumeUnits>
+			<DoseQuantity>5</DoseQuantity>
+			<DoseUoM>
+				<Code>U</Code>
+				<Description>U</Description>
+			</DoseUoM>
+			<NumberOfRefills>8</NumberOfRefills>
+			<ExternalId>Medications_72</ExternalId>
+			<EncounterNumber>0000000108</EncounterNumber>
+		</Medication>
+		<Medication>
+			<PlacerId>00233</PlacerId>
+			<FillerId>00235</FillerId>
+			<OrderedBy>
+				<Code>ME</Code>
+				<Description>Dr. Martin Evans</Description>
+			</OrderedBy>
+			<VerifiedBy>
+				<Code>RX</Code>
+				<Description>Pharmacist</Description>
+			</VerifiedBy>
+			<Frequency>
+				<Code>BID</Code>
+				<Description>Twice a day</Description>
+			</Frequency>
+			<Duration>
+				<Code>D</Code>
+				<Description>30 Days</Description>
+			</Duration>
+			<Status>IP</Status>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<TextInstruction>Administer 20units subcutaneously BID for blood sugar</TextInstruction>
+			<EnteredBy>
+				<Code>ME</Code>
+				<Description>Dr. Martin Evans</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Lenox Hospital</Code>
+				<Description>Lenox Hospital</Description>
+			</EnteredAt>
+			<EnteredOn>2023-01-05T15:00:00Z</EnteredOn>
+			<FromTime>2023-01-05T15:00:00Z</FromTime>
+			<DrugProduct>
+				<Code>78456</Code>
+				<Description>NPH 20units</Description>
+			</DrugProduct>
+			<StrengthVolume>20</StrengthVolume>
+			<StrengthVolumeUnits>units</StrengthVolumeUnits>
+			<DoseQuantity>20</DoseQuantity>
+			<DoseUoM>
+				<Code>U</Code>
+				<Description>U</Description>
+			</DoseUoM>
+			<NumberOfRefills>8</NumberOfRefills>
+			<ExternalId>Medications_73</ExternalId>
+			<EncounterNumber>0000000108</EncounterNumber>
+		</Medication>
+	</Medications>
+	<Action>AddOrUpdate</Action>
+	<UpdateECRDemographics>true</UpdateECRDemographics>
+	<SendingFacility>Lenox Hospital</SendingFacility>
+</Container>

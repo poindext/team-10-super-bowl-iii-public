@@ -1,0 +1,1315 @@
+<Container>
+	<Patient>
+		<Name>
+			<FamilyName>Chan</FamilyName>
+			<GivenName>Raymond</GivenName>
+		</Name>
+		<MaritalStatus>
+			<Code>S</Code>
+			<Description>Single</Description>
+		</MaritalStatus>
+		<Gender>
+			<Code>M</Code>
+			<Description>Male</Description>
+		</Gender>
+		<BirthTime>1948-05-27T00:00:00Z</BirthTime>
+		<PatientNumbers>
+			<PatientNumber>
+				<Number>CMHC2308912</Number>
+				<Organization>
+					<Code>Community Health Care NYC</Code>
+					<Description>Community Health Care NYC</Description>
+				</Organization>
+				<NumberType>MRN</NumberType>
+			</PatientNumber>
+		</PatientNumbers>
+		<Addresses>
+			<Address>
+				<Street>75 Francis St</Street>
+				<City>
+					<Code>Boston</Code>
+					<Description>Boston</Description>
+				</City>
+				<State>
+					<Code>MA</Code>
+					<Description>MA</Description>
+				</State>
+				<Zip>
+					<Code>02115</Code>
+					<Description>02115</Description>
+				</Zip>
+			</Address>
+		</Addresses>
+		<EnteredAt>
+			<Code>Community Health Care NYC</Code>
+			<Description>Community Health Care NYC</Description>
+		</EnteredAt>
+	</Patient>
+	<Encounters>
+		<Encounter>
+			<EncounterNumber>0000000100</EncounterNumber>
+			<AdmissionType>
+				<Code>OP</Code>
+				<Description>Outpatient</Description>
+			</AdmissionType>
+			<EncounterType>O</EncounterType>
+			<AdmittingClinician>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</AdmittingClinician>
+			<ReferringClinician>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</ReferringClinician>
+			<AdmissionSource>
+				<Code>03</Code>
+				<Description>Outpatient Clinic</Description>
+			</AdmissionSource>
+			<AssignedWard>Community Health Care NYC</AssignedWard>
+			<AdmitReason>
+				<Code>OP</Code>
+				<Description>Outpatient</Description>
+			</AdmitReason>
+			<HealthCareFacility>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+				<Organization>
+					<Code>Community Health Care NYC</Code>
+					<Description>Community Health Care NYC</Description>
+				</Organization>
+			</HealthCareFacility>
+			<VisitDescription>Sick Visit</VisitDescription>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<FromTime>2023-11-01T12:00:00Z</FromTime>
+			<ToTime>2023-11-01T13:30:00Z</ToTime>
+			<ExternalId>Encounters_90</ExternalId>
+		</Encounter>
+		<Encounter>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<AdmissionType>
+				<Code>OP</Code>
+				<Description>Outpatient</Description>
+			</AdmissionType>
+			<EncounterType>O</EncounterType>
+			<AdmittingClinician>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</AdmittingClinician>
+			<AdmissionSource>
+				<Code>03</Code>
+				<Description>Outpatient Clinic</Description>
+			</AdmissionSource>
+			<AssignedWard>Outpatient Clinic</AssignedWard>
+			<AdmitReason>
+				<Code>OP</Code>
+				<Description>Outpatient</Description>
+			</AdmitReason>
+			<HealthCareFacility>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+				<Organization>
+					<Code>Community Health Care NYC</Code>
+					<Description>Community Health Care NYC</Description>
+				</Organization>
+			</HealthCareFacility>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T14:00:00Z</EnteredOn>
+			<FromTime>2021-04-18T14:00:00Z</FromTime>
+			<ToTime>2021-04-18T14:00:00Z</ToTime>
+			<ExternalId>Encounters_91</ExternalId>
+		</Encounter>
+		<Encounter>
+			<EncounterNumber>0000000002</EncounterNumber>
+			<AdmissionType>
+				<Code>OP</Code>
+				<Description>Outpatient</Description>
+			</AdmissionType>
+			<EncounterType>O</EncounterType>
+			<AdmittingClinician>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</AdmittingClinician>
+			<AdmissionSource>
+				<Code>03</Code>
+				<Description>Outpatient Clinic</Description>
+			</AdmissionSource>
+			<AssignedWard>OP Clinic</AssignedWard>
+			<AdmitReason>
+				<Code>OP</Code>
+				<Description>Outpatient</Description>
+			</AdmitReason>
+			<HealthCareFacility>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+				<Organization>
+					<Code>Community Health Care NYC</Code>
+					<Description>Community Health Care NYC</Description>
+				</Organization>
+			</HealthCareFacility>
+			<DischargeLocation>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</DischargeLocation>
+			<VisitDescription>Sick Visit</VisitDescription>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+			<FromTime>2024-05-02T14:00:00Z</FromTime>
+			<ToTime>2024-05-02T14:00:00Z</ToTime>
+			<ExternalId>Encounters_2</ExternalId>
+		</Encounter>
+	</Encounters>
+	<SocialHistories>
+		<SocialHistory>
+			<SocialHabit>
+				<Code>NS</Code>
+				<Description>Non Smoker</Description>
+			</SocialHabit>
+			<SocialHabitComments>Patient quit smoking over 17 years ago.</SocialHabitComments>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<FromTime>2021-04-18T14:00:00Z</FromTime>
+			<ExternalId>SocialHistories_2</ExternalId>
+		</SocialHistory>
+		<SocialHistory>
+			<SocialHabit>
+				<Code>ETOH</Code>
+				<Description>Alcohol abuse</Description>
+			</SocialHabit>
+			<SocialHabitComments>Patient admits to drinking 12-18 beers daily</SocialHabitComments>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<FromTime>2021-04-18T14:00:00Z</FromTime>
+			<ExternalId>SocialHistories_3</ExternalId>
+		</SocialHistory>
+	</SocialHistories>
+	<Diagnoses>
+		<Diagnosis>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<DiagnosingClinician>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</DiagnosingClinician>
+			<Diagnosis>
+				<Code>250.0</Code>
+				<Description>Diabetes Mellitus without complication</Description>
+			</Diagnosis>
+			<DiagnosisType>
+				<Code>C</Code>
+				<Description>Chronic</Description>
+			</DiagnosisType>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T14:00:00Z</EnteredOn>
+			<ExternalId>Diagnoses_48</ExternalId>
+		</Diagnosis>
+		<Diagnosis>
+			<EncounterNumber>0000000002</EncounterNumber>
+			<DiagnosingClinician>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</DiagnosingClinician>
+			<Diagnosis>
+				<Code>R64</Code>
+				<Description>Cachexia</Description>
+			</Diagnosis>
+			<DiagnosisType>
+				<Code>Final</Code>
+				<Description>Final</Description>
+			</DiagnosisType>
+			<Status>
+				<Code>A</Code>
+				<Description>Active</Description>
+			</Status>
+			<EnteredBy>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+			<ExternalId>Diagnoses_1</ExternalId>
+		</Diagnosis>
+		<Diagnosis>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<DiagnosingClinician>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</DiagnosingClinician>
+			<Diagnosis>
+				<Code>R63.6</Code>
+				<Description>Underweight</Description>
+			</Diagnosis>
+			<DiagnosisType>
+				<Code>Final</Code>
+				<Description>Final</Description>
+			</DiagnosisType>
+			<Status>
+				<Code>A</Code>
+				<Description>Active</Description>
+			</Status>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T10:00:00Z</EnteredOn>
+			<ExternalId>Diagnoses_50</ExternalId>
+		</Diagnosis>
+		<Diagnosis>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<DiagnosingClinician>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</DiagnosingClinician>
+			<Diagnosis>
+				<Code>F10.180</Code>
+				<Description>Alcohol abuse with alcohol-induced anxiety disorder</Description>
+			</Diagnosis>
+			<DiagnosisType>
+				<Code>Final</Code>
+				<Description>Final</Description>
+			</DiagnosisType>
+			<Status>
+				<Code>A</Code>
+				<Description>Active</Description>
+			</Status>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T10:00:00Z</EnteredOn>
+			<ExternalId>Diagnoses_51</ExternalId>
+		</Diagnosis>
+	</Diagnoses>
+	<Observations>
+		<Observation>
+			<ExternalId>Observations_160</ExternalId>
+			<EncounterNumber>0000000100</EncounterNumber>
+			<ObservationTime>2023-11-01T13:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8310-5</Code>
+				<Description>Body Temperature</Description>
+			</ObservationCode>
+			<ObservationValue>100.2</ObservationValue>
+			<Clinician>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</Clinician>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_161</ExternalId>
+			<EncounterNumber>0000000100</EncounterNumber>
+			<ObservationTime>2023-11-01T13:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8462-4</Code>
+				<Description>BP Diastolic</Description>
+			</ObservationCode>
+			<ObservationValue>80</ObservationValue>
+			<Clinician>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</Clinician>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_162</ExternalId>
+			<EncounterNumber>0000000100</EncounterNumber>
+			<ObservationTime>2023-11-01T13:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8480-6</Code>
+				<Description>BP Systolic</Description>
+			</ObservationCode>
+			<ObservationValue>135</ObservationValue>
+			<Clinician>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</Clinician>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_163</ExternalId>
+			<EncounterNumber>0000000100</EncounterNumber>
+			<ObservationTime>2023-11-01T13:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8867-4</Code>
+				<Description>Heart Rate</Description>
+			</ObservationCode>
+			<ObservationValue>83</ObservationValue>
+			<Clinician>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</Clinician>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_164</ExternalId>
+			<EncounterNumber>0000000100</EncounterNumber>
+			<ObservationTime>2023-11-01T13:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>9279-1</Code>
+				<Description>Respiratory Rate</Description>
+			</ObservationCode>
+			<ObservationValue>18</ObservationValue>
+			<Clinician>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</Clinician>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_167</ExternalId>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<ObservationTime>2021-04-18T14:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8310-5</Code>
+				<Description>Body Temperature</Description>
+			</ObservationCode>
+			<ObservationValue>98.4</ObservationValue>
+			<Clinician>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T14:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_168</ExternalId>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<ObservationTime>2021-04-18T14:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8462-4</Code>
+				<Description>BP Diastolic</Description>
+			</ObservationCode>
+			<ObservationValue>72</ObservationValue>
+			<Clinician>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T14:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_169</ExternalId>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<ObservationTime>2021-04-18T14:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8480-6</Code>
+				<Description>BP Systolic</Description>
+			</ObservationCode>
+			<ObservationValue>110</ObservationValue>
+			<Clinician>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T14:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_170</ExternalId>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<ObservationTime>2021-04-18T14:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8867-4</Code>
+				<Description>Heart Rate</Description>
+			</ObservationCode>
+			<ObservationValue>80</ObservationValue>
+			<Clinician>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T14:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_171</ExternalId>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<ObservationTime>2021-04-18T14:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>9279-1</Code>
+				<Description>Respiratory Rate</Description>
+			</ObservationCode>
+			<ObservationValue>16</ObservationValue>
+			<Clinician>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T14:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_165</ExternalId>
+			<EncounterNumber>0000000100</EncounterNumber>
+			<ObservationTime>2023-11-01T13:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>3141-9</Code>
+				<Description>Weight</Description>
+			</ObservationCode>
+			<ObservationValue>102</ObservationValue>
+			<Clinician>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-01T13:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_166</ExternalId>
+			<EncounterNumber>0000000100</EncounterNumber>
+			<ObservationTime>2023-11-01T13:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8302-2</Code>
+				<Description>Height</Description>
+			</ObservationCode>
+			<ObservationValue>64 </ObservationValue>
+			<Clinician>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-01T13:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_172</ExternalId>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<ObservationTime>2021-04-18T14:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>3141-9</Code>
+				<Description>Weight</Description>
+			</ObservationCode>
+			<ObservationValue>105</ObservationValue>
+			<Clinician>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T14:00:00Z</EnteredOn>
+		</Observation>
+		<Observation>
+			<ExternalId>Observations_173</ExternalId>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<ObservationTime>2021-04-18T14:00:00Z</ObservationTime>
+			<ObservationCode>
+				<Code>8302-2</Code>
+				<Description>Height</Description>
+			</ObservationCode>
+			<ObservationValue>64 </ObservationValue>
+			<Clinician>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</Clinician>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T14:00:00Z</EnteredOn>
+		</Observation>
+	</Observations>
+	<Problems>
+		<Problem>
+			<EncounterNumber>0000000100</EncounterNumber>
+			<ProblemDetails>Patient with long standing history of Bipolar Disorder.</ProblemDetails>
+			<Problem>
+				<Code>296.53</Code>
+				<Description>Bipolar Disorder</Description>
+			</Problem>
+			<Comments>Receives Outpatient Mental Health Services</Comments>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<FromTime>2023-11-01T13:00:00Z</FromTime>
+			<ExternalId>Problems_18</ExternalId>
+		</Problem>
+		<Problem>
+			<EncounterNumber>0000000100</EncounterNumber>
+			<ProblemDetails>Recent trouble controlling blood sugars.</ProblemDetails>
+			<Problem>
+				<Code>250.0</Code>
+				<Description>Diabetes Mellitus without complication</Description>
+			</Problem>
+			<Comments>Plan to monitor HgA1C routinely.</Comments>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<FromTime>2023-11-01T13:00:00Z</FromTime>
+			<ExternalId>Problems_19</ExternalId>
+		</Problem>
+		<Problem>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<Problem>
+				<Code>248342006</Code>
+				<Description>Underweight (finding)</Description>
+			</Problem>
+			<Status>
+				<Code>A</Code>
+				<Description>Active</Description>
+			</Status>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<FromTime>2021-04-18T14:00:00Z</FromTime>
+			<ExternalId>Problems_20</ExternalId>
+		</Problem>
+		<Problem>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<Problem>
+				<Code>66590003</Code>
+				<Description>Alcohol dependence (disorder)</Description>
+			</Problem>
+			<Status>
+				<Code>A</Code>
+				<Description>Active</Description>
+			</Status>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<FromTime>2021-04-18T14:00:00Z</FromTime>
+			<ExternalId>Problems_21</ExternalId>
+		</Problem>
+	</Problems>
+	<Documents>
+		<Document>
+			<EncounterNumber>0000000100</EncounterNumber>
+			<DocumentTime>2023-11-01T13:00:00Z</DocumentTime>
+			<NoteText>S: Patient is in today not feeling well with complaints of cough for the last three weeks. He is a bit sick with bodyaches. 
+He is coughing. He has a sore throat, especially when he coughs. 
+His cough is productive of blood tinged colored sputum. He has had some chills. 
+No vomiting. No diarrhea. He is sleeping okay. 
+He does not feel like he needs anything for the cough. 
+
+O: Vital signs as per chart. Respirations 22. 
+Exam: Nontoxic. No acute distress. Alert and oriented. 
+HEENT: TMs are clear bilaterally without erythema or bulging. 
+Clear external canals. Clear tympanic. Conjunctivae are clear. 
+Clear nasal mucosa. Clear oropharynx with moist mucous membranes. 
+NECK is soft and supple without lymphadenopathy. 
+LUNGS are diminished and coarse with no severe rhonchi or wheezes. 
+HEART is regular rate and rhythm without murmur. 
+ABDOMEN is soft and nontender.  Severely chacectic and undernourished.
+SOCIAL: Lives in low income housing in Chinatown. 
+Admits to significant ETOH use
+Uses food stamps
+
+Influenza test is negative. Rapid strep screen is negative.
+
+A: Bronchitis/URI.
+
+P: 
+1. Motrin as needed for fever and discomfort.
+2. Push fluids.
+3. Follow up if symptoms persist or worsen, otherwise as needed.
+			</NoteText>
+			<DocumentType>
+				<Code>SV</Code>
+				<Description>Sick Visit</Description>
+			</DocumentType>
+			<Clinician>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</Clinician>
+			<DocumentName>Clinic Sick Visit</DocumentName>
+			<FileType>Sick Visit</FileType>
+			<DocumentNumber>13657810</DocumentNumber>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-01T13:00:00Z</EnteredOn>
+			<ExternalId>Documents_58</ExternalId>
+		</Document>
+		<Document>
+			<EncounterNumber>0000000102</EncounterNumber>
+			<DocumentTime>2021-04-18T14:00:00Z</DocumentTime>
+			<NoteText>CHIEF COMPLAINT: Cough and abdominal pain for two days.
+
+HISTORY OF PRESENT ILLNESS: Patient presents with generalized body aches, cough, nausea, and right-sided abdominal pain for two days. The patient stated that the abdominal pain was only associated with coughing. The patient reported that the cough is dry in nature and the patient had subjective fevers and chills at home.
+
+PAST MEDICAL HISTORY:  Patient is a poor medical historian and demonstrates poor medical compliance.
+
+SOCIAL HISTORY: The patient quit smoking 17 years ago; prior to that had smoked one pack per day for 44 years. Admits to significant alcohol use. Denies any IV drug use.  Lives in low income housing.  
+
+PHYSICAL EXAMINATION:  GENERAL: This is a severely mal-nourished elderly Asian gentleman. VITAL SIGNS: On presentation included a temperature of 100.1, pulse of 144 with a blood pressure of 126/77, the patient is saturating at 95% on room air, and has respiratory rate of 20. HEENT: Anicteric sclerae. Conjunctivae pink. Throat was clear. Mucosal membranes were dry. CHEST: Coarse breath sounds bilaterally at the bases. CARDIAC: S1 and S2. No murmurs, rubs or gallops. No evidence of carotid bruits. ABDOMEN: Positive bowel sounds, presence of soreness on examination in the abdomen on palpation. There is no rebound or guarding. EXTREMITIES: No clubbing, cyanosis or edema.
+
+FINAL DIAGNOSIS: Bronchitis.
+
+FOLLOWUP:  Return to clinic in 2 weeks. 
+			</NoteText>
+			<DocumentType>
+				<Code>SV</Code>
+				<Description>Sick Visit</Description>
+			</DocumentType>
+			<Clinician>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</Clinician>
+			<DocumentName>Clinic Sick Visit</DocumentName>
+			<FileType>Clinic Sick Visit</FileType>
+			<DocumentNumber>57648</DocumentNumber>
+			<Status>
+				<Code>F</Code>
+				<Description>Final</Description>
+			</Status>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T14:00:00Z</EnteredOn>
+			<ExternalId>Documents_59</ExternalId>
+		</Document>
+	</Documents>
+	<LabOrders>
+		<LabOrder>
+			<PlacerId>00213</PlacerId>
+			<FillerId>00215</FillerId>
+			<OrderItem>
+				<Code>626-2</Code>
+				<Description>Strep Test</Description>
+			</OrderItem>
+			<OrderedBy>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</OrderedBy>
+			<EnteringOrganization>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteringOrganization>
+			<Specimen>Throat Swab</Specimen>
+			<SpecimenCollectedTime>2023-11-01T14:00:00Z</SpecimenCollectedTime>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>JM</Code>
+				<Description>John Murphy</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-01T14:00:00Z</EnteredOn>
+			<FromTime>2023-11-01T14:00:00Z</FromTime>
+			<ToTime>2023-11-01T14:00:00Z</ToTime>
+			<Result>
+				<ResultType>IM</ResultType>
+				<ResultItems>
+					<LabResultItem>
+						<EnteredOn>2023-11-01T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>626-2</Code>
+							<Description>Strep Test</Description>
+						</TestItemCode>
+						<ResultValue>Neg</ResultValue>
+						<ResultValueUnits>uL</ResultValueUnits>
+						<ResultNormalRange>Pos/Neg</ResultNormalRange>
+						<ExternalId>LabResultItem_485</ExternalId>
+					</LabResultItem>
+				</ResultItems>
+				<ResultTime>2023-11-01T14:00:00Z</ResultTime>
+				<ExternalId>Result_491</ExternalId>
+			</Result>
+			<ExternalId>LabOrders_113</ExternalId>
+			<EncounterNumber>0000000100</EncounterNumber>
+		</LabOrder>
+		<LabOrder>
+			<PlacerId>00214</PlacerId>
+			<FillerId>00216</FillerId>
+			<OrderItem>
+				<Code>58410-2</Code>
+				<Description>CBC</Description>
+			</OrderItem>
+			<OrderedBy>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</OrderedBy>
+			<EnteringOrganization>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteringOrganization>
+			<Specimen>Blood</Specimen>
+			<SpecimenCollectedTime>2023-11-01T14:00:00Z</SpecimenCollectedTime>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>JM</Code>
+				<Description>John Murphy</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-01T14:00:00Z</EnteredOn>
+			<FromTime>2023-11-01T14:00:00Z</FromTime>
+			<ToTime>2023-11-01T14:00:00Z</ToTime>
+			<Result>
+				<ResultType>IM</ResultType>
+				<ResultItems>
+					<LabResultItem>
+						<EnteredOn>2023-11-01T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>WBC</Code>
+							<Description>WBC</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>7.2</ResultValue>
+						<ResultValueUnits>K/uL</ResultValueUnits>
+						<ResultNormalRange>4.4-11.3</ResultNormalRange>
+						<ExternalId>LabResultItem_486</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2023-11-01T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>RBC</Code>
+							<Description>RBC</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>4.1</ResultValue>
+						<ResultValueUnits>M/uL</ResultValueUnits>
+						<ResultNormalRange>4.40-6.00</ResultNormalRange>
+						<ExternalId>LabResultItem_487</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2023-11-01T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Hg</Code>
+							<Description>Hemoglobin</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>13.4</ResultValue>
+						<ResultValueUnits>G/DL</ResultValueUnits>
+						<ResultNormalRange>13.8-18.0</ResultNormalRange>
+						<ExternalId>LabResultItem_488</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2023-11-01T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Hct</Code>
+							<Description>Hematocrit</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>32.3</ResultValue>
+						<ResultValueUnits>%</ResultValueUnits>
+						<ResultNormalRange>40.0-54.0</ResultNormalRange>
+						<ExternalId>LabResultItem_489</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2023-11-01T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Plt</Code>
+							<Description>Platelet Count</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>263</ResultValue>
+						<ResultValueUnits>K/uL</ResultValueUnits>
+						<ResultNormalRange>150-450</ResultNormalRange>
+						<ExternalId>LabResultItem_490</ExternalId>
+					</LabResultItem>
+				</ResultItems>
+				<ResultTime>2023-11-01T14:00:00Z</ResultTime>
+				<ExternalId>Result_492</ExternalId>
+			</Result>
+			<ExternalId>LabOrders_114</ExternalId>
+			<EncounterNumber>0000000100</EncounterNumber>
+		</LabOrder>
+		<LabOrder>
+			<PlacerId>00215</PlacerId>
+			<FillerId>00217</FillerId>
+			<OrderItem>
+				<Code>55454-3</Code>
+				<Description>HgA1C</Description>
+			</OrderItem>
+			<OrderedBy>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</OrderedBy>
+			<EnteringOrganization>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteringOrganization>
+			<Specimen>Blood</Specimen>
+			<SpecimenCollectedTime>2023-11-01T14:00:00Z</SpecimenCollectedTime>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>JM</Code>
+				<Description>John Murphy</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-01T14:00:00Z</EnteredOn>
+			<FromTime>2023-11-01T14:00:00Z</FromTime>
+			<ToTime>2023-11-01T14:00:00Z</ToTime>
+			<Result>
+				<ResultType>IM</ResultType>
+				<ResultItems>
+					<LabResultItem>
+						<EnteredOn>2023-11-01T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>HgA1C</Code>
+							<Description>HgA1C</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>7.6</ResultValue>
+						<ResultValueUnits>%</ResultValueUnits>
+						<ResultNormalRange>
+							<![CDATA[<7]]>
+						</ResultNormalRange>
+						<ExternalId>LabResultItem_491</ExternalId>
+					</LabResultItem>
+				</ResultItems>
+				<ResultTime>2023-11-01T14:00:00Z</ResultTime>
+				<ExternalId>Result_497</ExternalId>
+			</Result>
+			<ExternalId>LabOrders_115</ExternalId>
+			<EncounterNumber>0000000100</EncounterNumber>
+		</LabOrder>
+		<LabOrder>
+			<PlacerId>00001</PlacerId>
+			<FillerId>00001</FillerId>
+			<OrderItem>
+				<Code>51990-0</Code>
+				<Description>BMP</Description>
+			</OrderItem>
+			<OrderedBy>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</OrderedBy>
+			<EnteringOrganization>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteringOrganization>
+			<Specimen>Blood</Specimen>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>JM</Code>
+				<Description>John Murphy</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+			<FromTime>2024-05-02T14:00:00Z</FromTime>
+			<ToTime>2024-05-02T14:00:00Z</ToTime>
+			<Result>
+				<ResultType>IM</ResultType>
+				<ResultItems>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Na</Code>
+							<Description>Sodium</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>139</ResultValue>
+						<ResultValueUnits>MMOL/L</ResultValueUnits>
+						<ResultNormalRange>135-146</ResultNormalRange>
+						<ExternalId>LabResultItem_2</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>K</Code>
+							<Description>Potassium</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>4.9</ResultValue>
+						<ResultValueUnits>MMOL/L</ResultValueUnits>
+						<ResultNormalRange>3.4-5.2</ResultNormalRange>
+						<ExternalId>LabResultItem_3</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Cl</Code>
+							<Description>Chloride</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>110</ResultValue>
+						<ResultValueUnits>MMOL/L</ResultValueUnits>
+						<ResultNormalRange>98-110</ResultNormalRange>
+						<ExternalId>LabResultItem_4</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>CO2</Code>
+							<Description>Total CO2</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>25</ResultValue>
+						<ResultValueUnits>MMOL/L</ResultValueUnits>
+						<ResultNormalRange>24-32</ResultNormalRange>
+						<ExternalId>LabResultItem_5</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>BUN</Code>
+							<Description>BUN</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>12</ResultValue>
+						<ResultValueUnits>MG/DL</ResultValueUnits>
+						<ResultNormalRange>7-20</ResultNormalRange>
+						<ExternalId>LabResultItem_6</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Cr</Code>
+							<Description>Creatinine</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>2.3</ResultValue>
+						<ResultValueUnits>MG/DL</ResultValueUnits>
+						<ResultNormalRange>0.6-1.3</ResultNormalRange>
+						<ExternalId>LabResultItem_7</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Glu</Code>
+							<Description>Glucose</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>162</ResultValue>
+						<ResultValueUnits>MG/DL</ResultValueUnits>
+						<ResultNormalRange>70-100</ResultNormalRange>
+						<ExternalId>LabResultItem_8</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>TP</Code>
+							<Description>Total Protein</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>8.2</ResultValue>
+						<ResultValueUnits>G/DL</ResultValueUnits>
+						<ResultNormalRange>6.2-8.2</ResultNormalRange>
+						<ExternalId>LabResultItem_9</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Alb</Code>
+							<Description>Albumin</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>2.8</ResultValue>
+						<ResultValueUnits>G/DL</ResultValueUnits>
+						<ResultNormalRange>3.5-5.0</ResultNormalRange>
+						<ExternalId>LabResultItem_10</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>Glo</Code>
+							<Description>Globulin</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>3.1</ResultValue>
+						<ResultValueUnits>G/DL</ResultValueUnits>
+						<ResultNormalRange>2.0-4.0</ResultNormalRange>
+						<ExternalId>LabResultItem_11</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>AST</Code>
+							<Description>AST (SGOT)</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>21</ResultValue>
+						<ResultValueUnits>IU/L</ResultValueUnits>
+						<ResultNormalRange>11-40</ResultNormalRange>
+						<ExternalId>LabResultItem_12</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>ALT</Code>
+							<Description>ALT (SGPT)</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>30</ResultValue>
+						<ResultValueUnits>IU/L</ResultValueUnits>
+						<ResultNormalRange>7-40</ResultNormalRange>
+						<ExternalId>LabResultItem_13</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>ALKP</Code>
+							<Description>Alk Phosphate</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>77</ResultValue>
+						<ResultValueUnits>IU/L</ResultValueUnits>
+						<ResultNormalRange>30-95</ResultNormalRange>
+						<ExternalId>LabResultItem_14</ExternalId>
+					</LabResultItem>
+					<LabResultItem>
+						<EnteredOn>2024-05-02T14:00:00Z</EnteredOn>
+						<TestItemCode>
+							<Code>TB</Code>
+							<Description>Total Bilirubin</Description>
+							<IsNumeric>true</IsNumeric>
+						</TestItemCode>
+						<ResultValue>1.2</ResultValue>
+						<ResultValueUnits>MG/DL</ResultValueUnits>
+						<ResultNormalRange>0.2-1.3</ResultNormalRange>
+						<ExternalId>LabResultItem_15</ExternalId>
+					</LabResultItem>
+				</ResultItems>
+				<ResultTime>2024-05-02T14:00:00Z</ResultTime>
+				<ExternalId>Result_2</ExternalId>
+			</Result>
+			<ExternalId>LabOrders_2</ExternalId>
+			<EncounterNumber>0000000002</EncounterNumber>
+		</LabOrder>
+	</LabOrders>
+	<RadOrders>
+		<RadOrder>
+			<PlacerId>00218</PlacerId>
+			<FillerId>00220</FillerId>
+			<OrderItem>
+				<Code>71020</Code>
+				<Description>Chest X-Ray</Description>
+			</OrderItem>
+			<Specimen>Body</Specimen>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<EnteredBy>
+				<Code>SS</Code>
+				<Description>Scott Stone, NP</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2021-04-18T14:00:00Z</EnteredOn>
+			<FromTime>2021-04-18T14:00:00Z</FromTime>
+			<Result>
+				<ResultText>Findings:
+Iincreased markings present bilaterally likely consistent with chronic lung changes.
+There is no evidence of effusion or consolidation.
+Degenerative changes were seen in the shoulder. </ResultText>
+				<DocumentName>Chest XRay</DocumentName>
+				<ExternalId>Result_491</ExternalId>
+			</Result>
+			<ExternalId>RadOrders_11</ExternalId>
+			<EncounterNumber>0000000102</EncounterNumber>
+		</RadOrder>
+	</RadOrders>
+	<Medications>
+		<Medication>
+			<PlacerId>00217</PlacerId>
+			<FillerId>00219</FillerId>
+			<OrderedBy>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</OrderedBy>
+			<VerifiedBy>
+				<Code>RX</Code>
+				<Description>Pharmacist</Description>
+			</VerifiedBy>
+			<Frequency>
+				<Code>HS</Code>
+				<Description>At Bedtime</Description>
+			</Frequency>
+			<Duration>
+				<Code>D</Code>
+				<Description>30 Days</Description>
+			</Duration>
+			<Status>C</Status>
+			<Priority>
+				<Code>R</Code>
+				<Description>Routine</Description>
+			</Priority>
+			<TextInstruction>Take daily at bedtime</TextInstruction>
+			<EnteredBy>
+				<Code>KS</Code>
+				<Description>Dr. Karen Shah</Description>
+			</EnteredBy>
+			<EnteredAt>
+				<Code>Community Health Care NYC</Code>
+				<Description>Community Health Care NYC</Description>
+			</EnteredAt>
+			<EnteredOn>2023-11-01T13:00:00Z</EnteredOn>
+			<FromTime>2023-11-01T14:00:00Z</FromTime>
+			<DrugProduct>
+				<Code>29876</Code>
+				<Description>Seroquel 300mg</Description>
+			</DrugProduct>
+			<StrengthVolume>300</StrengthVolume>
+			<StrengthVolumeUnits>mg</StrengthVolumeUnits>
+			<DoseQuantity>300</DoseQuantity>
+			<DoseUoM>
+				<Code>MG</Code>
+				<Description>MG</Description>
+			</DoseUoM>
+			<NumberOfRefills>8</NumberOfRefills>
+			<DosageForm>
+				<Code>C42998</Code>
+				<Description>Talbet</Description>
+			</DosageForm>
+			<Route>
+				<Code>C38288</Code>
+				<Description>Oral</Description>
+			</Route>
+			<ExternalId>Medications_70</ExternalId>
+			<EncounterNumber>0000000100</EncounterNumber>
+		</Medication>
+	</Medications>
+	<Action>AddOrUpdate</Action>
+	<UpdateECRDemographics>true</UpdateECRDemographics>
+	<SendingFacility>Community Health Care NYC</SendingFacility>
+</Container>
