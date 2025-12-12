@@ -323,7 +323,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /ProviderSearch/{enterpriseId}:
+  /ProviderRetrieve/{enterpriseId}:
     get:
       tags:
         - Retrieve Individual
