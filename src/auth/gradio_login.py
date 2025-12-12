@@ -70,3 +70,4 @@ def logout(state: GradioSession) -> GradioSession:
     state.patient_name = None
     return state
 
+
