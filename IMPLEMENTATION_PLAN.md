@@ -52,11 +52,14 @@ Team10HealthCompanion/
 │   │   ├── __init__.py
 │   │   ├── session.py               # Session memory management
 │   │   └── ui.py                    # Streamlit chat UI components
-│   └── utils/
-│       ├── __init__.py
-│       ├── fhir_minimizer.py        # FHIR data minimization utilities
-│       ├── patient_data.py          # Patient data utilities (CSV reader)
-│       └── debug.py                 # Debug panel for development
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── fhir_minimizer.py        # FHIR data minimization utilities
+│   │   ├── patient_data.py          # Patient data utilities (CSV reader)
+│   │   └── debug.py                 # Debug panel for development
+│   └── yaml/
+│       ├── FHIR_SERVICE_CONTRACT.yaml              # OpenAPI 3.0 contract for FHIR service
+│       └── TRIAL_SEARCH_SERVICE_CONTRACT.yaml      # OpenAPI 3.0 contract for clinical trial search service
 ```
 
 ## Core Components Architecture
