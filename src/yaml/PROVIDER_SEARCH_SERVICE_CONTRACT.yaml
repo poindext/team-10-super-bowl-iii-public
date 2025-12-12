@@ -621,12 +621,12 @@ components:
 #
 # Example: Get Individual Master Record
 # ---------------------------------------
-# GET /ProviderSearch/123456 HTTP/1.1
+# GET /ProviderRetrieve/123456 HTTP/1.1
 # Host: ec2-98-82-129-136.compute-1.amazonaws.com
 # Authorization: Basic base64(username:password)
 #
 # curl -X GET \
-#   "http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov/ProviderSearch/123456" \
+#   "http://ec2-98-82-129-136.compute-1.amazonaws.com/i4h/ctgov/ProviderRetrieve/123456" \
 #   -H "Accept: application/json" \
 #   -u "username:password"
 #
@@ -660,7 +660,7 @@ components:
 # # Get full master record
 # enterprise_id = "123456"
 # response = requests.get(
-#     f"{base_url}/ProviderSearch/{enterprise_id}",
+#     f"{base_url}/ProviderRetrieve/{enterprise_id}",
 #     auth=auth,
 #     headers={"Accept": "application/json"}
 # )
