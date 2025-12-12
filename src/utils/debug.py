@@ -10,7 +10,7 @@ from typing import Any, Dict
 def render_debug_panel():
     """Render a collapsible debug panel in the sidebar showing session state and flow information."""
     with st.sidebar:
-        st.markdown("---")
+        st.markdown("<div style='margin-top: 2rem;'>", unsafe_allow_html=True)
         with st.expander("🔍 Debug Panel", expanded=False):
             st.markdown("### Session State Information")
             
@@ -123,3 +123,4 @@ def render_debug_panel():
             
             for step, status in flow_steps.items():
                 st.write(f"**{step}:** {status}")
+        st.markdown("</div>", unsafe_allow_html=True)

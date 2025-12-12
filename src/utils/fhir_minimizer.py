@@ -3,7 +3,6 @@ FHIR data minimizer - removes verbose fields while maintaining FHIR structure.
 """
 
 from typing import Dict, Any, List, Optional
-import json
 
 
 def minimize_fhir_bundle(fhir_bundle: Dict[str, Any]) -> Dict[str, Any]:
@@ -174,37 +173,4 @@ def simplify_coding(coding_obj: Any) -> Any:
     return coding_obj
 
 
-def extract_sample_resources(fhir_bundle: Dict[str, Any], resource_types: List[str], count_per_type: int = 15) -> Dict[str, Any]:
-    """
-    Extract sample resources of specified types from FHIR bundle.
-    
-    Args:
-        fhir_bundle: Full FHIR bundle
-        resource_types: List of resource types to extract (e.g., ["Condition", "MedicationStatement"])
-        count_per_type: Number of resources to extract per type
-        
-    Returns:
-        FHIR bundle with only sampled resources
-    """
-    if not fhir_bundle or "entry" not in fhir_bundle:
-        return fhir_bundle
-    
-    sampled_entries = []
-    resource_counts = {rt: 0 for rt in resource_types}
-    
-    for entry in fhir_bundle.get("entry", []):
-        resource = entry.get("resource", {})
-        resource_type = resource.get("resourceType")
-        
-        if resource_type in resource_types:
-            if resource_counts[resource_type] < count_per_type:
-                sampled_entries.append(entry)
-                resource_counts[resource_type] += 1
-    
-    return {
-        "resourceType": "Bundle",
-        "type": "collection",
-        "total": len(sampled_entries),
-        "entry": sampled_entries
-    }
 

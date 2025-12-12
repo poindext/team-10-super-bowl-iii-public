@@ -1,5 +1,10 @@
 # Core Framework
 streamlit>=1.28.0
+gradio>=4.0.0
+# Pin compatible versions to avoid Gradio introspection errors
+pydantic==2.10.6
+fastapi<0.116
+starlette<0.47  # Parallel Gradio implementation
 
 # LLM Provider
 openai>=1.0.0

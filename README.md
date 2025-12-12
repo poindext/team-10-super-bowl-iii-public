@@ -28,7 +28,9 @@ The system contains NO hardcoded logic. Instead:
 
 ## Tech Stack
 
-- **Chat Interface**: Streamlit.io
+- **Chat Interface**: 
+  - **Streamlit** (primary) - `streamlit run src/main.py`
+  - **Gradio** (parallel implementation) - `python gradio_app.py`
 - **Language**: Python 3.9+
 - **LLM Provider**: OpenAI (GPT-5.1)
 - **External APIs**: 
@@ -71,20 +73,34 @@ cp .env.example .env
 
 ### Running the Application
 
+**Streamlit Version (Primary):**
 ```bash
 streamlit run src/main.py
 ```
+
+**Gradio Version (Parallel Implementation):**
+```bash
+python gradio_app.py
+```
+
+Both versions share the same backend logic and can run independently. The Gradio version offers better chat UI customization while maintaining zero impact on the Streamlit application.
 
 ## Project Structure
 
 ```
 Team10HealthCompanion/
+├── gradio_app.py            # Gradio entry point (parallel implementation)
 ├── src/
 │   ├── main.py              # Streamlit entry point
 │   ├── auth/                # Authentication module
+│   │   ├── login.py         # Streamlit authentication
+│   │   └── gradio_login.py  # Gradio authentication
 │   ├── llm/                 # LLM orchestrator and reasoning
 │   ├── tools/               # Tool ecosystem (FHIR fetch, Provider Search, Clinical Trials)
 │   ├── chat/                # Chat interface and session management
+│   │   ├── session.py       # Streamlit session management
+│   │   ├── gradio_session.py # Gradio session management
+│   │   └── ui.py            # Streamlit UI components
 │   └── utils/               # Utilities (FHIR minimization, patient data, debug)
 ├── fhir_test_patients.csv   # Test patient data with MPIIDs and FHIR endpoints
 └── requirements.txt         # Python dependencies

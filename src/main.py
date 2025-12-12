@@ -17,10 +17,15 @@ from src.chat.ui import render_chat_interface
 from src.utils.debug import render_debug_panel
 from src.tools.fhir_fetch import FHIRFetchTool
 from src.utils.fhir_minimizer import minimize_fhir_bundle
+from src.utils.health_summary import extract_health_summary
+from src.utils.ui_styles import inject_custom_css
 
 
 def main():
     """Main application entry point."""
+    # Inject custom CSS for modern styling
+    inject_custom_css()
+    
     # Initialize session
     initialize_session()
     
@@ -65,14 +70,46 @@ def main():
                 st.info("**Please contact technical staff for assistance.**")
                 st.stop()
     
-    # Main app header with logout
-    col1, col2 = st.columns([3, 1])
+    # Header
+    col1, col2 = st.columns([4, 1])
     with col1:
         st.title("AI Health Companion")
-        st.markdown(f"**Patient:** {patient_name} (MPIID: {mpiid})")
+        st.caption(f"Patient: {patient_name} (MPIID: {mpiid})")
     with col2:
-        if st.button("Logout", type="secondary"):
+        st.markdown("<br>", unsafe_allow_html=True)
+        if st.button("Logout", type="secondary", use_container_width=True):
             logout()
+    
+    # Health summary using Streamlit's native container
+    fhir_data = get_fhir_data()
+    if fhir_data:
+        health_summary = extract_health_summary(fhir_data)
+        
+        with st.container():
+            st.subheader("Health Summary")
+            st.write(health_summary['one_line_summary'])
+            
+            if health_summary['diagnoses']:
+                st.write("**Current Diagnoses:**")
+                for diagnosis in health_summary['diagnoses']:
+                    st.write(f"• {diagnosis}")
+            else:
+                st.write("*No active diagnoses on record*")
+            
+            # Additional info
+            info_parts = []
+            if health_summary['medication_count'] > 0:
+                info_parts.append(f"{health_summary['medication_count']} medication(s)")
+            if health_summary['last_encounter_date']:
+                date_str = health_summary['last_encounter_date']
+                if 'T' in date_str:
+                    date_str = date_str.split('T')[0]
+                info_parts.append(f"Last visit: {date_str}")
+            
+            if info_parts:
+                st.caption(" | ".join(info_parts))
+            
+            st.divider()
     
     # Debug panel in sidebar (doesn't impact main UI)
     render_debug_panel()

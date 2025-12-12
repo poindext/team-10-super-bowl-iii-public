@@ -54,8 +54,25 @@ class LLMOrchestrator:
         
         # Add FHIR data context if available (fhir_data should already be minimized from session)
         if fhir_data:
-            fhir_context = f"\n\nPATIENT FHIR DATA (minimized raw JSON):\n{json.dumps(fhir_data, indent=2)}\n\nUse this data to provide personalized, context-aware responses."
-            messages[0]["content"] += fhir_context
+            try:
+                # Serialize FHIR data to JSON
+                fhir_json = json.dumps(fhir_data, indent=2)
+                fhir_size = len(fhir_json)
+                
+                # Check if FHIR data is too large (rough estimate: 200k chars ≈ 50k tokens)
+                if fhir_size > 200000:
+                    # Truncate or provide summary instead
+                    print(f"Warning: FHIR data is large ({fhir_size} chars). Using summary approach.")
+                    # For now, still include it but with a note
+                    fhir_context = f"\n\nPATIENT FHIR DATA (minimized raw JSON, {fhir_size} chars):\n{fhir_json[:200000]}...\n[Data truncated due to size - {fhir_size - 200000} chars omitted]\n\nUse this data to provide personalized, context-aware responses."
+                else:
+                    fhir_context = f"\n\nPATIENT FHIR DATA (minimized raw JSON):\n{fhir_json}\n\nUse this data to provide personalized, context-aware responses."
+                
+                messages[0]["content"] += fhir_context
+            except Exception as e:
+                print(f"Error serializing FHIR data: {str(e)}")
+                # Continue without FHIR data if serialization fails
+                messages[0]["content"] += "\n\nNote: Patient FHIR data is available but could not be included in this request."
         
         # Add conversation history
         for msg in conversation_history:
@@ -95,15 +112,31 @@ class LLMOrchestrator:
         
         try:
             # Call OpenAI API
+            # Note: Not setting max_completion_tokens - let the model generate as much as needed
+            # The model will naturally stop when the response is complete
+            # This is especially important for comprehensive health summaries
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=messages,
                 temperature=0.7,
-                max_completion_tokens=1000
+                timeout=60  # 60 second timeout
             )
             
             return response.choices[0].message.content
         
         except Exception as e:
-            return f"I apologize, but I encountered an error: {str(e)}. Please try again."
+            error_msg = str(e)
+            # Log more details for debugging
+            import traceback
+            error_details = traceback.format_exc()
+            print(f"LLM Error: {error_msg}")
+            print(f"Error details: {error_details}")
+            
+            # Provide more helpful error message
+            if "context_length_exceeded" in error_msg.lower() or "token" in error_msg.lower():
+                return "I apologize, but the health data is too large to process. Please contact technical staff for assistance."
+            elif "timeout" in error_msg.lower():
+                return "I apologize, but the request timed out. Please try again with a more specific question."
+            else:
+                return f"I apologize, but I encountered an error: {error_msg}. Please try again."
 

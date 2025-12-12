@@ -5,7 +5,7 @@ FHIR data fetching tool - executed immediately after login.
 import os
 import sys
 import requests
-from typing import Dict, Any, Optional
+from typing import Dict, Any
 from requests.auth import HTTPBasicAuth
 from dotenv import load_dotenv
 
